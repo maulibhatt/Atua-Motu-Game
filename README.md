@@ -1,5 +1,4 @@
 # Atua-Motu-Game
-Atua Motu
 On an island full of mysteries and ancient magic, Alex seeks to rid the land and its inhabitants of a great spirit monster. Be careful who you trust.
 
 ## How to Install and Play
