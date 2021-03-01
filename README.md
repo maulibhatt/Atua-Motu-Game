@@ -2,8 +2,8 @@
 On an island full of mysteries and ancient magic, Alex seeks to rid the land and its inhabitants of a great spirit monster. Be careful who you trust.
 
 ## How to Install and Play
-MacOS: Unzip the folder titled Atua Motu MacOSX, and run the executable application attached.
-Windows: Unzip the folder titled Atua Motu Windowsx86_64bit and run the executable application inside. 
+MacOS: Open the folder titled Atua Motu MacOSX, and run the executable application in the folder titled MacOS.
+Windows: Open the folder titled Atua Motu Windowsx86_64bit and run the executable application inside. 
 To view game information and code, unzip the Atua Motu Game file and view at your pleasure.
 
 
