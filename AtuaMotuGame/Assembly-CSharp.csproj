@@ -63,6 +63,7 @@
     <Compile Include="Assets/PlayerBoulderManager.cs" />
     <Compile Include="Assets/Ink/Demos/Basic Demo/Scripts/BasicInkExample.cs" />
     <Compile Include="Assets/Scripts/Quests/QuestManager.cs" />
+    <Compile Include="Assets/BoulderManager.cs" />
     <Compile Include="Assets/Scripts/CameraController.cs" />
     <Compile Include="Assets/Scripts/DialogObject.cs" />
     <Compile Include="Assets/Ink/Demos/Basic Demo/Scripts/QuitGameOnKeypress.cs" />
@@ -83,7 +84,6 @@
     <Compile Include="Assets/LedgeCollision.cs" />
     <Compile Include="Assets/Scripts/Inventory/PhysicalInventoryItem.cs" />
     <Compile Include="Assets/Scripts/Inventory/InventoryManager.cs" />
-    <Compile Include="Assets/BoulderManager.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
