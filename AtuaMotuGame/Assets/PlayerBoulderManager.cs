@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerBoulderManager : MonoBehaviour
 {
 
-    private bool safety = false;
+    public bool safety = false;
     // Start is called before the first frame update
     void Start()
     {

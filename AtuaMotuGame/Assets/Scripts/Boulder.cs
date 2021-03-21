@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Boulder : MonoBehaviour
 {
     public float boulderSpeed;
@@ -22,10 +22,9 @@ public class Boulder : MonoBehaviour
     {
         if (other.gameObject.name == "Player")
         {
-            bool safety = other.gameObject.GetComponent<PlayerBoulderManager>().getSafety();
-            if (!safety)
+            if (!other.gameObject.GetComponent<PlayerBoulderManager>().getSafety())
             {
-                Debug.Log("died");
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
         }
     }
