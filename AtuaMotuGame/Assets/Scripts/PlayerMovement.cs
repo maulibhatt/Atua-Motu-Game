@@ -32,7 +32,8 @@ public class PlayerMovement : MonoBehaviour
         {
             StartCoroutine("AllowChangeCheck");
         }
-        if (!isOnIce || allowChange) {
+        if (!isOnIce || allowChange)
+        {
             allowChange = false;
             //// Input: Left arrow = -1, Right arrow = 1, None = 0
             movement.x = Input.GetAxisRaw("Horizontal");
@@ -42,10 +43,10 @@ public class PlayerMovement : MonoBehaviour
             {
                 lastMovement = movement;
             }
-
-            animator.SetFloat("Horizontal", movement.x);
-            animator.SetFloat("Vertical", movement.y);
-            animator.SetFloat("Speed", movement.sqrMagnitude);
+        }
+        animator.SetFloat("Horizontal", lastMovement.x);
+        animator.SetFloat("Vertical", lastMovement.y);
+        animator.SetFloat("Speed", movement.sqrMagnitude);
 
             if (Input.GetAxisRaw("Horizontal") == 1 || Input.GetAxisRaw("Horizontal") == -1 || Input.GetAxisRaw("Vertical") == 1 || Input.GetAxisRaw("Vertical") == -1)
             {
@@ -73,7 +74,7 @@ public class PlayerMovement : MonoBehaviour
                 firePoint.transform.localRotation = Quaternion.Euler(0, 0, 0);
                 fire.localRotation = Quaternion.Euler(0, 0, 180);
             }*/
-        }
+
     }
 
     void FixedUpdate()
