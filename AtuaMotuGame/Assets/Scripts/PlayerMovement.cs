@@ -13,7 +13,11 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 lastMovement;
     private Vector2 movement;
 
+    private Vector3 lastPosition;
+
     public bool isOnIce = false;
+
+    private bool allowChange;
 
 
     void Start() {
@@ -22,9 +26,14 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         movement = Vector2.zero;
-        if (!isOnIce) { 
- 
+        if (isOnIce)
+        {
+            StartCoroutine("AllowChangeCheck");
+        }
+        if (!isOnIce || allowChange) {
+            allowChange = false;
             //// Input: Left arrow = -1, Right arrow = 1, None = 0
             movement.x = Input.GetAxisRaw("Horizontal");
             movement.y = Input.GetAxisRaw("Vertical");
@@ -47,6 +56,15 @@ public class PlayerMovement : MonoBehaviour
         } else
         {
             rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        }
+    }
+    IEnumerator AllowChangeCheck()
+    {
+        Vector3 lastPos = transform.position;
+        yield return new WaitForSeconds(0.05f);
+        if (lastPos == transform.position)
+        {
+            allowChange = true;
         }
     }
 }
