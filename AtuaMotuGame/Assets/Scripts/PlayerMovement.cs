@@ -48,11 +48,11 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("Vertical", lastMovement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
 
-            if (Input.GetAxisRaw("Horizontal") == 1 || Input.GetAxisRaw("Horizontal") == -1 || Input.GetAxisRaw("Vertical") == 1 || Input.GetAxisRaw("Vertical") == -1)
-            {
-                animator.SetFloat("LastHorizontal", Input.GetAxisRaw("Horizontal"));
-                animator.SetFloat("LastVertical", Input.GetAxisRaw("Vertical"));
-            }
+        if (Input.GetAxisRaw("Horizontal") == 1 || Input.GetAxisRaw("Horizontal") == -1 || Input.GetAxisRaw("Vertical") == 1 || Input.GetAxisRaw("Vertical") == -1)
+        {
+            animator.SetFloat("LastHorizontal", Input.GetAxisRaw("Horizontal"));
+            animator.SetFloat("LastVertical", Input.GetAxisRaw("Vertical"));
+        }
 
             /*if (Input.GetAxisRaw("Horizontal") > 0)
             {
@@ -91,7 +91,7 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator AllowChangeCheck()
     {
         Vector3 lastPos = transform.position;
-        yield return new WaitForSeconds(0.05f);
+        yield return new WaitForSeconds(0.03f);
         if (lastPos == transform.position)
         {
             allowChange = true;
