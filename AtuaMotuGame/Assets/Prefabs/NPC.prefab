@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 5114537788320670906}
   m_Layer: 0
   m_Name: NPC
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,7 +29,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5114537788320671040}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 13.16, y: 7.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -51,6 +51,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -139,10 +140,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInRange: 0
-  clueOn: {fileID: 11400000, guid: 8750be5ca289440bebe385ce147694ea, type: 2}
-  clueOff: {fileID: 11400000, guid: 3e6fa475077ce4fc4bb8182a92ba90de, type: 2}
+  clue: {fileID: 11400000, guid: 8750be5ca289440bebe385ce147694ea, type: 2}
   speed: 2
   myBounds: {fileID: 0}
+  moveTime: 3
+  waitTime: 1
+  myDialog: {fileID: 4900000, guid: b2b4b2903d98648dc8c81f58946c9fc3, type: 3}
+  dialogSignal: {fileID: 11400000, guid: 551c6fdf3ad7d41f2865e7bae5566eea, type: 2}
+  dialogCanvas: {fileID: 0}
+  myQuest: {fileID: 11400000, guid: 2c1443b3b0d164b45a90022839f6647d, type: 2}
+  theBDC: {fileID: 0}
 --- !u!61 &5114537788320670907
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -182,6 +189,6 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.024883747, y: -0.058061123}
+  m_Offset: {x: 0.024883747, y: -0.03282571}
   serializedVersion: 2
-  m_Radius: 1.1149583
+  m_Radius: 0.8710153

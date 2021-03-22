@@ -11,11 +11,12 @@ GameObject:
   - component: {fileID: 1667842431313973295}
   - component: {fileID: 1667842431313973294}
   - component: {fileID: 1667842431313973281}
-  - component: {fileID: 1667842431313973280}
   - component: {fileID: 1667842431313973292}
   - component: {fileID: 1667842431313973293}
   - component: {fileID: 1667842431313973288}
   - component: {fileID: 1667842431313973291}
+  - component: {fileID: 411526217865783300}
+  - component: {fileID: 1845520923}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -78,7 +79,8 @@ SpriteRenderer:
   m_SortingLayerID: -1140203353
   m_SortingLayer: 2
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 0f39a9205e4394ee1b6ba8269428d176, type: 3}
+  m_Sprite: {fileID: 7152930139536384079, guid: 413b936cd8e0f5e4eba365ffc6089517,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -110,21 +112,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1667842431313973280
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1667842431313973283}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 129bf1087d126484fb5d978463068722, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  rb: {fileID: 1667842431313973281}
-  animator: {fileID: 1667842431313973292}
 --- !u!95 &1667842431313973292
 Animator:
   serializedVersion: 3
@@ -202,6 +189,35 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &411526217865783300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667842431313973283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdd7868d3884b71448d2f095a38323bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  rb: {fileID: 1667842431313973281}
+  animator: {fileID: 1667842431313973292}
+  isOnIce: 0
+--- !u!114 &1845520923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667842431313973283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 538ff01acda5cb44782f1fd88837643b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1667842431313973292}
 --- !u!1 &1667842432082701196
 GameObject:
   m_ObjectHideFlags: 0
