@@ -1,0 +1,684 @@
+fileFormatVersion: 2
+guid: e48533a7e4348454681d307c23a99c6f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2804348303814012052
+    second: bully_cleaned_0
+  - first:
+      213: 4439396557095798177
+    second: bully_cleaned_1
+  - first:
+      213: 4594566480932869854
+    second: bully_cleaned_2
+  - first:
+      213: -1898248199447222672
+    second: bully_cleaned_3
+  - first:
+      213: 2624622876360746470
+    second: bully_cleaned_4
+  - first:
+      213: 5036536186773073215
+    second: bully_cleaned_5
+  - first:
+      213: -5679916385681233051
+    second: bully_cleaned_6
+  - first:
+      213: 7087662233265957675
+    second: bully_cleaned_7
+  - first:
+      213: -9206545536119583394
+    second: bully_cleaned_8
+  - first:
+      213: 7485653997659508107
+    second: bully_cleaned_9
+  - first:
+      213: 3467884725632320384
+    second: bully_cleaned_10
+  - first:
+      213: -7616188018122157569
+    second: bully_cleaned_11
+  - first:
+      213: -1495981256903616108
+    second: bully_cleaned_12
+  - first:
+      213: 6469143212291001934
+    second: bully_cleaned_13
+  - first:
+      213: -8299869675000672506
+    second: bully_cleaned_14
+  - first:
+      213: 6185863420412498109
+    second: bully_cleaned_15
+  - first:
+      213: -4307525301760386744
+    second: bully_cleaned_16
+  - first:
+      213: 1822290851574060641
+    second: bully_cleaned_17
+  - first:
+      213: 2953698213446510629
+    second: bully_cleaned_18
+  - first:
+      213: -56525540211030511
+    second: bully_cleaned_19
+  - first:
+      213: 8388870414741307535
+    second: bully_cleaned_20
+  - first:
+      213: -8137074839391905841
+    second: bully_cleaned_21
+  - first:
+      213: -269809971452226443
+    second: bully_cleaned_22
+  - first:
+      213: 6021568836519834205
+    second: bully_cleaned_23
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bully_cleaned_0
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 195
+        width: 25
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6352b46314f419d0800000000000000
+      internalID: -2804348303814012052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bully_cleaned_1
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 195
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a589c2d5a7eb9d30800000000000000
+      internalID: 4439396557095798177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bully_cleaned_2
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 195
+        width: 25
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed69be01fdd23cf30800000000000000
+      internalID: 4594566480932869854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bully_cleaned_3
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 195
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0766c68e15118a5e0800000000000000
+      internalID: -1898248199447222672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bully_cleaned_4
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 151
+        width: 29
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e5a8d6a9988c6420800000000000000
+      internalID: 2624622876360746470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bully_cleaned_5
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 86
+        width: 25
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3d62072afe55e540800000000000000
+      internalID: 5036536186773073215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bully_cleaned_6
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 54
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56bac850422ec21b0800000000000000
+      internalID: -5679916385681233051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bully_cleaned_7
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 151
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2be4c5cf3f6c5260800000000000000
+      internalID: 7087662233265957675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bully_cleaned_8
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 151
+        width: 29
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5d422ffc97cb3080800000000000000
+      internalID: -9206545536119583394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bully_cleaned_9
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 151
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8d4af176a262e760800000000000000
+      internalID: 7485653997659508107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bully_cleaned_10
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 151
+        width: 29
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0834159c8c6602030800000000000000
+      internalID: 3467884725632320384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bully_cleaned_11
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 119
+        width: 29
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff11e3d895ddd4690800000000000000
+      internalID: -7616188018122157569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bully_cleaned_12
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 119
+        width: 28
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4991e9f09f43d3be0800000000000000
+      internalID: -1495981256903616108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bully_cleaned_13
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 119
+        width: 28
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4e0cb10a7307c950800000000000000
+      internalID: 6469143212291001934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bully_cleaned_14
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 119
+        width: 29
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60f4c835180f0dc80800000000000000
+      internalID: -8299869675000672506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bully_cleaned_15
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 119
+        width: 29
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db015cab10a98d550800000000000000
+      internalID: 6185863420412498109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bully_cleaned_16
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 86
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 849909f6f889834c0800000000000000
+      internalID: -4307525301760386744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bully_cleaned_17
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 87
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1661485efd31a4910800000000000000
+      internalID: 1822290851574060641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bully_cleaned_18
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 86
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5286f2230e4adf820800000000000000
+      internalID: 2953698213446510629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bully_cleaned_19
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 86
+        width: 25
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1160cf6125e273ff0800000000000000
+      internalID: -56525540211030511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bully_cleaned_20
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 54
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f80807132314b6470800000000000000
+      internalID: 8388870414741307535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bully_cleaned_21
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 54
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc7d64fab8d431f80800000000000000
+      internalID: -8137074839391905841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bully_cleaned_22
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 54
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5745bbea241714cf0800000000000000
+      internalID: -269809971452226443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bully_cleaned_23
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 54
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d52b35304f8e09350800000000000000
+      internalID: 6021568836519834205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 79a4903d256ef074a9b8fba4a7193ad7
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

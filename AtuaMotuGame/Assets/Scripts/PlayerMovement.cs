@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool allowChange;
 
+    public Transform attackPoint;
 
     void Start() {
         rb = GetComponent<Rigidbody2D>();
@@ -54,26 +55,22 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat("LastVertical", Input.GetAxisRaw("Vertical"));
         }
 
-            /*if (Input.GetAxisRaw("Horizontal") > 0)
-            {
-                firePoint.transform.localRotation = Quaternion.Euler(0, 0, 90);
-                fire.localRotation = Quaternion.Euler(0, 0, 180);
-            }
-            else if (Input.GetAxisRaw("Horizontal") < 0)
-            {
-                firePoint.transform.localRotation = Quaternion.Euler(0, 0, -90);
-                fire.localRotation = Quaternion.Euler(0, 0, 180);
-            }
-            if (Input.GetAxisRaw("Vertical") > 0)
-            {
-                firePoint.transform.localRotation = Quaternion.Euler(0, 0, 180);
-                fire.localRotation = Quaternion.Euler(0, 0, 180);
-            }
-            else if (Input.GetAxisRaw("Vertical") < 0)
-            {
-                firePoint.transform.localRotation = Quaternion.Euler(0, 0, 0);
-                fire.localRotation = Quaternion.Euler(0, 0, 180);
-            }*/
+        if (Input.GetAxisRaw("Horizontal") > 0)
+        {
+            attackPoint.transform.localRotation = Quaternion.Euler(0, 0, 90);
+        }
+        else if (Input.GetAxisRaw("Horizontal") < 0)
+        {
+            attackPoint.transform.localRotation = Quaternion.Euler(0, 0, -90);
+        }
+        if (Input.GetAxisRaw("Vertical") > 0)
+        {
+            attackPoint.transform.localRotation = Quaternion.Euler(0, 0, 180);
+        }
+        else if (Input.GetAxisRaw("Vertical") < 0)
+        {
+            attackPoint.transform.localRotation = Quaternion.Euler(0, 0, 0);
+        }
 
     }
 
