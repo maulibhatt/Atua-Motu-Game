@@ -41,7 +41,11 @@ public class BranchingDialogController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            StopCoroutine("MakeNewDialog");
+            afterDialog();
+        }
     }
 
     public void FinalBoss(Quest thisQuest)
@@ -154,63 +158,74 @@ public class BranchingDialogController : MonoBehaviour
         StartCoroutine(ScrollCo());
     }
 
+    public void afterDialog()
+    {
+        if ((bool)myQuest.myStory.variablesState["accepted_quest"])
+        {
+            myQuest.myQuestActive = true;
+            theQM.InitiatePlayerQuest();
+            if (myQuest.npcName == "Erised")
+            {
+                theQM.SetNPCQuestStatus(myQuest.npcName, true);
+            }
+        }
+        if ((bool)myQuest.myStory.variablesState["completed_quest"])
+        {
+            if (myQuest.npcGivesItem)
+            {
 
+                if (theQM.playerInventory.myInventory.Contains(myQuest.sacrificeItem))
+                {
+                    myQuest.sacrificeItem.itemCount += 1;
+                }
+                else
+                {
+                    theQM.playerInventory.myInventory.Add(myQuest.sacrificeItem);
+                    myQuest.sacrificeItem.itemCount += 1;
+                }
+                //myQuest.sacrificeItem.IncreaseAmount(1);
+                myQuest.npcGivesItem = false;
+            }
+
+            myQuest.myQuestActive = false;
+            myQuest.myQuestCompleted = true;
+            theQM.CompleteQuest();
+            theQM.SetNPCQuestStatus(myQuest.npcName, true);
+
+        }
+
+        if (myQuest.myStory.canContinue)
+        {
+            RefreshView();
+        }
+        else
+        {
+            if (myQuest.myStory.currentChoices.Count > 0)
+            {
+                MakeNewChoices();
+            }
+            // No more choices to make
+            else
+            {
+                dialogCanvas.SetActive(false);
+            }
+            // Scrolls to the bottom
+            StartCoroutine(ScrollCo());
+        }
+    }
 
     // Add dialog boxes and choice buttons as needed. Remove old buttons.
     public void RefreshView()
     {
         // Check if story can continue
-        while (myQuest.myStory.canContinue)
+        if (myQuest.myStory.canContinue)
         {
             // If it can, then show the next line as a mew dialog
-            MakeNewDialog(myQuest.myStory.Continue());
-            // If the current character's quest is active
-            if ((bool)myQuest.myStory.variablesState["accepted_quest"])
-            {
-                myQuest.myQuestActive = true;
-                theQM.InitiatePlayerQuest();
-                if (myQuest.npcName == "Erised")
-                {
-                    theQM.SetNPCQuestStatus(myQuest.npcName, true);
-                }
-            }
-            if ((bool)myQuest.myStory.variablesState["completed_quest"])
-            {
-                if(myQuest.npcGivesItem){
-                    
-                    if(theQM.playerInventory.myInventory.Contains(myQuest.sacrificeItem))
-                    {
-                        myQuest.sacrificeItem.itemCount += 1;
-                    }
-                    else
-                    {
-                        theQM.playerInventory.myInventory.Add(myQuest.sacrificeItem);
-                        myQuest.sacrificeItem.itemCount += 1;
-                    }
-                    //myQuest.sacrificeItem.IncreaseAmount(1);
-                    myQuest.npcGivesItem = false;
-                }
+            //MakeNewDialog(myQuest.myStory.Continue());
 
-                myQuest.myQuestActive = false;
-                myQuest.myQuestCompleted = true;
-                theQM.CompleteQuest();
-                theQM.SetNPCQuestStatus(myQuest.npcName, true);
-
-            }
+            StartCoroutine("MakeNewDialog", myQuest.myStory.Continue());
         }
-        // if there are choices to make, make them
-        if (myQuest.myStory.currentChoices.Count > 0)
-        {
-            MakeNewChoices();
-        }
-        // No more choices to make
-        else
-        {
-            dialogCanvas.SetActive(false);
-        }
-        // Scrolls to the bottom
-        StartCoroutine(ScrollCo());
-
+            
     }
 
     // Deletes dialogs from previous chat
@@ -221,20 +236,28 @@ public class BranchingDialogController : MonoBehaviour
             Destroy(dialogHolder.transform.GetChild(i).gameObject);
         }
     }
-    void MakeNewDialog(string newDialog)
+    IEnumerator MakeNewDialog(string newDialog)
     {
         // Instantiates the dialog object (the prefab) on the dialog holder
         DialogObject newDialogObject = Instantiate(dialogPrefab, dialogHolder.transform).GetComponent<DialogObject>();
-        newDialogObject.Setup(newDialog);
+        StartCoroutine(ScrollCo());
+        float r = newDialogObject.Setup(newDialog);
+        yield return new WaitForSeconds(r);
+        afterDialog();
     }
 
-    void MakeNewChoices()
+
+    void RemoveOldChoices()
     {
-        // First remove existing buttons
         for (int i = 0; i < choiceHolder.transform.childCount; i++)
         {
             Destroy(choiceHolder.transform.GetChild(i).gameObject);
         }
+
+    }
+    void MakeNewChoices()
+    {
+        // First remove existing buttons
         // add the current choices to the choice holder.
         for (int i = 0; i < myQuest.myStory.currentChoices.Count; i++)
         {
@@ -258,6 +281,7 @@ public class BranchingDialogController : MonoBehaviour
     void ChooseChoice(int choiceIndex)
     {
         myQuest.myStory.ChooseChoiceIndex(choiceIndex);
+        RemoveOldChoices();
         RefreshView();
     }
 
