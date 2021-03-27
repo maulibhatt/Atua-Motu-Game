@@ -94,6 +94,7 @@
     <Compile Include="Assets/LedgeCollision.cs" />
     <Compile Include="Assets/Scripts/Inventory/PhysicalInventoryItem.cs" />
     <Compile Include="Assets/Scripts/Inventory/InventoryManager.cs" />
+    <Compile Include="Assets/DigUI.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
