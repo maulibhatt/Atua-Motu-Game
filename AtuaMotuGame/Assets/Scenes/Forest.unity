@@ -8849,7 +8849,7 @@ MonoBehaviour:
   clue: {fileID: 11400000, guid: 8750be5ca289440bebe385ce147694ea, type: 2}
   dialogBox: {fileID: 1587454560}
   dialogText: {fileID: 1587454559}
-  dialog: This way to The Icy Cave
+  dialog: This way to The Ice Cave
 --- !u!1001 &811258525
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59332,4 +59332,4 @@ MonoBehaviour:
   clue: {fileID: 11400000, guid: 8750be5ca289440bebe385ce147694ea, type: 2}
   dialogBox: {fileID: 1587454560}
   dialogText: {fileID: 1587454559}
-  dialog: This way to The Rocky Cave
+  dialog: This way to The Rock Cave
