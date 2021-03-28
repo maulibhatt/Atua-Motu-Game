@@ -6,6 +6,7 @@ public class PlayerAttack : MonoBehaviour
 {
     public Animator animator;
     bool canAttack = true;
+    bool canBreak = false;
     public Transform attackPoint;
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
@@ -15,6 +16,11 @@ public class PlayerAttack : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && canAttack) 
         {
             Attack();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space) && canBreak) 
+        {
+            Break();
         }
     }
 
@@ -33,11 +39,21 @@ public class PlayerAttack : MonoBehaviour
         }
     }
 
+    void Break()
+    {
+        animator.SetTrigger("Attack");
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Interactable"))
         {
             canAttack = false;
+        }
+
+        if (other.CompareTag("Breakable"))
+        {
+            canBreak = true;
         }
     }
 
@@ -46,6 +62,10 @@ public class PlayerAttack : MonoBehaviour
         if (other.CompareTag("Interactable"))
         {
             canAttack = true;
+        }
+        if (other.CompareTag("Breakable"))
+        {
+            canBreak = false;
         }
     }
 

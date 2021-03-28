@@ -38,6 +38,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\TextAssetValue.cs" />
      <Compile Include="Assets\Scripts\SignalListener.cs" />
+     <Compile Include="Assets\Scripts\TileMapTrigger.cs" />
      <Compile Include="Assets\Scripts\SignalSender.cs" />
      <Compile Include="Assets\PlayerBoulderManager.cs" />
      <Compile Include="Assets\Scripts\ExitBounds.cs" />
@@ -46,6 +47,7 @@
      <Compile Include="Assets\BoulderManager.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\BeginArenaBattle.cs" />
+     <Compile Include="Assets\Scripts\NPCFollowAI.cs" />
      <Compile Include="Assets\Scripts\DialogObject.cs" />
      <Compile Include="Assets\Ink\Demos\Basic Demo\Scripts\QuitGameOnKeypress.cs" />
      <Compile Include="Assets\Scripts\Sign.cs" />
@@ -71,7 +73,7 @@
      <Compile Include="Assets\LedgeCollision.cs" />
      <Compile Include="Assets\Scripts\Inventory\PhysicalInventoryItem.cs" />
      <Compile Include="Assets\Scripts\Inventory\InventoryManager.cs" />
-     <Compile Include="Assets\Scripts\TileMapTrigger.cs" />
+     <Compile Include="Assets\BreakableTile.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
