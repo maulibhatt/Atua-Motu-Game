@@ -20,11 +20,9 @@ public class BreakableTile : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && playerInRange)
         {
-            Debug.Log("Tile Broken");
             var tilepos = player.transform.position;
             breakableTilemap.SetTile(breakableTilemap.WorldToCell(tilepos), null);
-            breakableTilemap.SetTile(breakableTilemap.WorldToCell(tilepos+ Vector3.up), null);
-            breakableTilemap.SetTile(breakableTilemap.WorldToCell(tilepos + Vector3.up + Vector3.up), null);
+            breakableTilemap.SetTile(breakableTilemap.WorldToCell(tilepos + Vector3.down), null);
         }
     }
 
@@ -34,18 +32,6 @@ public class BreakableTile : MonoBehaviour
         {
             playerInRange = true;
         }
-        //Debug.Log("Hit!!");
-        // if (other.gameObject.CompareTag("Player") && Input.GetKeyDown(KeyCode.Space))
-        // {
-            
-        //     Vector3 hitPosition = Vector3.zero;
-        //     foreach(ContactPoint2D hit in other.contacts)
-        //     {
-        //         hitPosition.x = hit.point.x - 0.01f * hit.normal.x;
-        //         hitPosition.y = hit.point.y - 0.01f * hit.normal.y;
-        //         breakableTilemap.SetTile(breakableTilemap.WorldToCell(hitPosition), null);
-        //     }
-        // }
     }
 
     private void OnCollisionExit2D(Collision2D other)
