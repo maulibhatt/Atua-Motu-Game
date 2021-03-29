@@ -59,6 +59,7 @@
     <Compile Include="Assets/Scripts/TextAssetValue.cs" />
     <Compile Include="Assets/Scripts/SignalListener.cs" />
     <Compile Include="Assets/Scripts/TileMapTrigger.cs" />
+    <Compile Include="Assets/DigUI.cs" />
     <Compile Include="Assets/Scripts/SignalSender.cs" />
     <Compile Include="Assets/PlayerBoulderManager.cs" />
     <Compile Include="Assets/Scripts/ExitBounds.cs" />
@@ -94,7 +95,6 @@
     <Compile Include="Assets/LedgeCollision.cs" />
     <Compile Include="Assets/Scripts/Inventory/PhysicalInventoryItem.cs" />
     <Compile Include="Assets/Scripts/Inventory/InventoryManager.cs" />
-    <Compile Include="Assets/DigUI.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
