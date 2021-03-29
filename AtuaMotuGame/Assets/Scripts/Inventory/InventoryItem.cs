@@ -19,12 +19,6 @@ public class InventoryItem : ScriptableObject
         itemCount = 0;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void DecreaseAmount(int amtToDecrease)
     {
         if (itemCount >= amtToDecrease)

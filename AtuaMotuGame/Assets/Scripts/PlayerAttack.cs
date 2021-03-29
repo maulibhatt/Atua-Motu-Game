@@ -10,6 +10,7 @@ public class PlayerAttack : MonoBehaviour
     public Transform attackPoint;
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
+    public GameObject dropItem;
 
     void Update()
     {
@@ -26,15 +27,25 @@ public class PlayerAttack : MonoBehaviour
 
     void Attack() 
     {
+        bool bullyhit = false;
+        bool beetleHit = false;
         animator.SetTrigger("Attack");
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         foreach (Collider2D enemy in hitEnemies)
         {
-            if (enemy.CompareTag("Bully"))
+            if (enemy.CompareTag("Bully") && bullyhit == false)
             {
-                Vector2 force = (enemy.transform.position - transform.position).normalized * 200;
+                bullyhit = true;
+                Vector2 force = (enemy.transform.position - transform.position).normalized * 300;
                 Rigidbody2D rb = enemy.transform.GetComponent<Rigidbody2D>();
                 rb.AddForce(force, ForceMode2D.Impulse);
+            }
+            else if (enemy.CompareTag("Beetle") && beetleHit == false)
+            {
+                beetleHit = true;
+                Destroy(enemy.gameObject);
+                Instantiate(dropItem, enemy.transform.position, enemy.transform.rotation);
+
             }
         }
     }

@@ -17,29 +17,15 @@ public class InventorySlot : MonoBehaviour
     public InventoryManager inventoryManager;
 
 
-    public void Setup(InventoryItem item, InventoryManager newIM)
+    public void Setup(InvItem item, InventoryManager newIM)
     {
-        thisItem = item;
+        thisItem = item.Item;
         inventoryManager = newIM;
         if (thisItem)
         {
             itemImage.sprite = thisItem.itemImage;
-            itemCountText.text = "" + thisItem.itemCount;
+            itemCountText.text = "" + item.Quantity;
         }
-    }
-
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void SlotClickedOn()

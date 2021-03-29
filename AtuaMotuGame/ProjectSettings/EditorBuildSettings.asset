@@ -11,4 +11,28 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: 2d68b90e112a74684b0d8cdb307aaa2c
+  - enabled: 1
+    path: Assets/Scenes/Forest.unity
+    guid: 66c3d5a7e2cde45319b7cde05e2b7b3c
+  - enabled: 1
+    path: Assets/Scenes/Beach.unity
+    guid: 2942dac9161f07646818fb87e2682c9d
+  - enabled: 1
+    path: Assets/Scenes/IceCave.unity
+    guid: 0d0a5201227924df88d7fb612cdabb39
+  - enabled: 1
+    path: Assets/Scenes/Rock_Climbn.unity
+    guid: 8435dbf2b5de94f779802220a54f64d0
+  - enabled: 1
+    path: Assets/Scenes/RockCave.unity
+    guid: e8feee18d4db54975ae714ac103740d2
+  - enabled: 1
+    path: Assets/Scenes/Town.unity
+    guid: 2bcbe653973fb4b5284365f1c10301fd
+  - enabled: 1
+    path: Assets/Scenes/Volcano.unity
+    guid: e8c49ee68a2eb614fad5742bc273a2a7
+  - enabled: 1
+    path: Assets/Scenes/DiggingInTheDesert.unity
+    guid: b638d90b9c15546d2af01638dc78076c
   m_configObjects: {}
