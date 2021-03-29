@@ -19,11 +19,11 @@ public class InventoryManager : MonoBehaviour
 
     void MakeInventorySlots()
     {
-        if (playerInventory)
+        if (GameState.Inventory != null)
         {
-            for (int i = playerInventory.myInventory.Count - 1; i >= 0; i--)
+            for (int i = GameState.Inventory.Count - 1; i >= 0; i--)
             {
-                if (playerInventory.myInventory[i].itemCount > 0)
+                if (GameState.Inventory[i].Quantity > 0)
                 {
                     // Creates a new slot and assigns it to variable newSlot
                     GameObject temp = Instantiate(emptyInventorySlot, inventoryContentPanel.transform.position, transform.rotation);
@@ -31,18 +31,13 @@ public class InventoryManager : MonoBehaviour
                     InventorySlot newSlot = temp.GetComponent<InventorySlot>();
                     if (newSlot)
                     {
-                        newSlot.Setup(playerInventory.myInventory[i], this);
+                        newSlot.Setup(GameState.Inventory[i], this);
                     }
                 }
             }
         }
-    }
-
-     // Start is called before the first frame update
-    void Start()
-    {
         
-     }
+    }
 
     // Enable is called whenever its enabled
     void OnEnable()

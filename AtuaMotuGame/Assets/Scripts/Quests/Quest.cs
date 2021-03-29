@@ -26,10 +26,4 @@ public class Quest : ScriptableObject
         myQuestActive = false;
         myQuestCompleted = false;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
