@@ -7,6 +7,7 @@ TagManager:
   - Interactable
   - Bully
   - Breakable
+  - BoulderStop
   layers:
   - Default
   - TransparentFX

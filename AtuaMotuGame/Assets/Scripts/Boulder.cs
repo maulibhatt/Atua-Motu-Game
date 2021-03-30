@@ -27,5 +27,10 @@ public class Boulder : MonoBehaviour
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
         }
+
+        if (other.gameObject.tag == "BoulderStop")
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
