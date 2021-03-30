@@ -40,10 +40,12 @@ public class Dig : MonoBehaviour
             if (item == null)
             { 
                 textObj.gameObject.GetComponent<TMP_Text>().text = "No Item Found";
-            } else
+            } else if (item.gameObject.name == "Item")
             {
-                textObj.gameObject.GetComponent<TMP_Text>().text = "Item Found";
-                
+                Debug.Log("Found");
+                textObj.gameObject.GetComponent<TMP_Text>().text = "Item ____ Found";
+                Destroy(item.gameObject);
+                //add item here;
             }
 
             Instantiate(digPrefab, this.transform.position, digPrefab.transform.rotation);
