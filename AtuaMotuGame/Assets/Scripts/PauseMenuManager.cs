@@ -76,4 +76,9 @@ public class PauseMenuManager : MonoBehaviour
     {
         //needs to be coded with scene and quest shit
     }
+
+    public void ViewActiveQuests()
+    {
+        //add code here
+    }
 }
