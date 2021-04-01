@@ -24,13 +24,13 @@ public class InstructionSign : Interactable
             // Check if the dialogbox is already active, then de-activate
            if (isActive)
             {
-                Destroy(dialogBox);
+                dialogBoxPrefab.SetActive(false);
                 isActive = false;
             }
           else
             {
                 isActive = true;
-                dialogBox = Instantiate(dialogBoxPrefab);
+                dialogBoxPrefab.SetActive(true);
             }
         }
     }
