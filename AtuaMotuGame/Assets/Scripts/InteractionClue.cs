@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InteractionClue : MonoBehaviour
+public class InteractionClue : Interactable
 {
     //public GameObject interactionClue;
     [SerializeField] private bool clueActive = false;

@@ -21,8 +21,12 @@ public class PlayerMovement : MonoBehaviour
 
     public Transform attackPoint;
 
+    private bool moveEnabled = true;
+
     void Start() {
         rb = GetComponent<Rigidbody2D>();
+        allowChange = true;
+        Time.timeScale = 1f;
     }
     // Update is called once per frame
     void Update()
@@ -33,12 +37,18 @@ public class PlayerMovement : MonoBehaviour
         {
             StartCoroutine("AllowChangeCheck");
         }
-        if (!isOnIce || allowChange)
+        if ((!isOnIce || allowChange) && moveEnabled)
         {
             allowChange = false;
             //// Input: Left arrow = -1, Right arrow = 1, None = 0
             movement.x = Input.GetAxisRaw("Horizontal");
+            Debug.Log(movement.x);
             movement.y = Input.GetAxisRaw("Vertical");
+            if (movement.x != 0 && movement.y != 0)
+
+            {
+                movement = lastMovement;
+            }
 
             if (movement.x != 0 || movement.y != 0)
             {
@@ -76,13 +86,16 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (isOnIce)
+        if (moveEnabled)
         {
-            rb.MovePosition(rb.position + lastMovement * moveSpeed * Time.fixedDeltaTime);
-        }
-        else
-        {
-            rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+            if (isOnIce)
+            {
+                rb.MovePosition(rb.position + lastMovement * moveSpeed * Time.fixedDeltaTime);
+            }
+            else
+            {
+                rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+            }
         }
     }
     IEnumerator AllowChangeCheck()
@@ -93,5 +106,14 @@ public class PlayerMovement : MonoBehaviour
         {
             allowChange = true;
         }
+    }
+    public void EnablePlayerMovement()
+    {
+        moveEnabled = true;
+    }
+    public void DisablePlayerMovement()
+    {
+
+        moveEnabled = false;
     }
 }

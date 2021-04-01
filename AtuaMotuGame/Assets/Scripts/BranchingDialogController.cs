@@ -70,15 +70,19 @@ public class BranchingDialogController : MonoBehaviour
             {
                 myQuest = thisQuest;
                 dialogCanvas.SetActive(true);
+                SendMessage("DisablePlayerMovement");
                 SetStory();
                 RefreshView();
             }
+            
         }
+
     }
 
     public void HideCanvas()
     {
         dialogCanvas.SetActive(false);
+        SendMessage("EnablePlayerMovement");
     }
 
 

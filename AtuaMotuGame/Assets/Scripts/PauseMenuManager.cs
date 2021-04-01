@@ -9,6 +9,7 @@ public class PauseMenuManager : MonoBehaviour
     private bool isPaused;
     public GameObject pausePanel;
     public GameObject inventoryPanel;
+    private bool isInventoryActive = false;
     //public string mainMenu;
 
     void Start()
@@ -21,8 +22,15 @@ public class PauseMenuManager : MonoBehaviour
     {
         if(Input.GetButtonDown("Pause"))
         {
+            if (isInventoryActive)
+            {
+                pausePanel.SetActive(true);
+                inventoryPanel.SetActive(false);
+                isInventoryActive = false;
+                return;
+            }
             isPaused = !isPaused;
-            if(isPaused)
+            if (isPaused)
             {
                 PauseGame();
             }
@@ -37,6 +45,7 @@ public class PauseMenuManager : MonoBehaviour
     {
         pausePanel.SetActive(false);
         inventoryPanel.SetActive(true);
+        isInventoryActive = true;
     }
 
     public void Resume()
@@ -61,5 +70,10 @@ public class PauseMenuManager : MonoBehaviour
     public void ExitGame()
     {
         SceneManager.LoadScene("StartMenu");
+    }
+
+    public void Abandon()
+    {
+        //needs to be coded with scene and quest shit
     }
 }
