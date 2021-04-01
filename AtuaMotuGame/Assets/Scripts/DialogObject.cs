@@ -35,7 +35,7 @@ public class DialogObject : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Return)){
-            myText.text = fullText;
+            myText.text = cName + fullText;
             StopCoroutine("showText");
         }
     }

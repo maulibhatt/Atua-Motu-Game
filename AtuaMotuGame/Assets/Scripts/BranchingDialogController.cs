@@ -25,6 +25,10 @@ public class BranchingDialogController : MonoBehaviour
 
     // [Header("Quest Variables")]
     [SerializeField] private QuestManager theQM;
+
+    private bool scrollInProgress = false;
+
+    private GameObject player;
     // [SerializeField] private bool myQuestCompleted;
     // [SerializeField] private bool myQuestActive;
 
@@ -35,15 +39,16 @@ public class BranchingDialogController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        player = GameObject.Find("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.Return) && scrollInProgress)
         {
             StopCoroutine("MakeNewDialog");
+            scrollInProgress = false;
             afterDialog();
         }
     }
@@ -70,7 +75,7 @@ public class BranchingDialogController : MonoBehaviour
             {
                 myQuest = thisQuest;
                 dialogCanvas.SetActive(true);
-                SendMessage("DisablePlayerMovement");
+                player.GetComponent<PlayerMovement>().DisablePlayerMovement();
                 SetStory();
                 RefreshView();
             }
@@ -82,7 +87,7 @@ public class BranchingDialogController : MonoBehaviour
     public void HideCanvas()
     {
         dialogCanvas.SetActive(false);
-        SendMessage("EnablePlayerMovement");
+        player.GetComponent<PlayerMovement>().EnablePlayerMovement();
     }
 
 
@@ -243,10 +248,12 @@ public class BranchingDialogController : MonoBehaviour
     IEnumerator MakeNewDialog(string newDialog)
     {
         // Instantiates the dialog object (the prefab) on the dialog holder
+        scrollInProgress = true;
         DialogObject newDialogObject = Instantiate(dialogPrefab, dialogHolder.transform).GetComponent<DialogObject>();
         StartCoroutine(ScrollCo());
         float r = newDialogObject.Setup(newDialog);
         yield return new WaitForSeconds(r);
+        scrollInProgress = false;
         afterDialog();
     }
 
