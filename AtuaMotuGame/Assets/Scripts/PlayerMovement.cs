@@ -42,7 +42,6 @@ public class PlayerMovement : MonoBehaviour
             allowChange = false;
             //// Input: Left arrow = -1, Right arrow = 1, None = 0
             movement.x = Input.GetAxisRaw("Horizontal");
-            Debug.Log(movement.x);
             movement.y = Input.GetAxisRaw("Vertical");
             if (movement.x != 0 && movement.y != 0)
 

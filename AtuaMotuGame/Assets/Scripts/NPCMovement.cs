@@ -18,11 +18,11 @@ public class NPCMovement : Interactable
     public float waitTime;
     private float waitTimeSeconds;
 
-    // Dialog fields
+    // Dialog fields commented out
     //[SerializeField] private TextAssetValue dialogValue;
-    [SerializeField] private TextAsset myDialog;
-    [SerializeField] private SignalSender dialogSignal;
-    [SerializeField] private GameObject dialogCanvas;
+    //[SerializeField] private TextAsset myDialog;
+    //[SerializeField] private SignalSender dialogSignal;
+    //[SerializeField] private GameObject dialogCanvas;
 
     public Quest myQuest;
     public BranchingDialogController theBDC;

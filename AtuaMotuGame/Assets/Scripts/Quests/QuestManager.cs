@@ -13,6 +13,8 @@ public class QuestManager : MonoBehaviour
     [SerializeField] private bool erised;
     [SerializeField] private bool bones;
 
+    public GameObject Birch;
+
     public List<Quest> questList = new List<Quest>();
     void Start()
     {
@@ -67,6 +69,27 @@ public class QuestManager : MonoBehaviour
             case "Bones":
                 bones = status;
                 break;
+        }
+    }
+
+    public bool CheckCompletion(string name)
+    {
+        switch (name) {
+            case "Maple":
+                var BirchAI = Birch.GetComponent<NPCFollowAI>();
+                if (BirchAI.currentlyFollowing)
+                {
+                    return true;
+                }
+                else
+                {   
+                    return false;
+                }
+            
+            default:
+                return false;
+
+
         }
     }
 

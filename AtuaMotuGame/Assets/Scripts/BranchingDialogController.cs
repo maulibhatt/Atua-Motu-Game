@@ -112,28 +112,27 @@ public class BranchingDialogController : MonoBehaviour
         {
             DeleteOldDialogs();
             myQuest.myStory = new Story(myQuest.myDialog.text);
+            BindFunction(myQuest.npcName);
 
-            // When items are given, the inventory reflects the change
-            myQuest.myStory.BindExternalFunction("giveItems", (int num) =>
+             // Check if player's has the potential to be done the quest, then go 
+            if (theQM.CheckCompletion(myQuest.npcName))
             {
-                myQuest.questItem.DecreaseAmount(num);
-            });
+                Debug.Log("has_items has been marked true");
+                myQuest.myStory.variablesState["has_items"] = true;
+            }
 
             // If this NPC's quest is active, start at the quest instruction
             if (myQuest.myQuestActive)
             {
-                // Check if player's inventory has the right number of items
-                if (myQuest.questItem.itemCount >= myQuest.itemCountNeeded)
-                {
-                    myQuest.myStory.variablesState["has_items"] = true;
-                }
-                myQuest.myStory.ChoosePathString("quest");
+                myQuest.myStory.ChoosePathString("accepted");
             }
+
             // If another NPC's quest is active, say "Find me after your quest"
-            if (!myQuest.myQuestActive && theQM.PlayerQuestStatus())
-            {
-                myQuest.myStory.ChoosePathString("other_quest_active");
-            }
+            // if (!myQuest.myQuestActive && theQM.PlayerQuestStatus())
+            // {
+            //     myQuest.myStory.ChoosePathString("other_quest_active");
+            // }
+            // If the quest is completed
             if (myQuest.myQuestCompleted)
             {
                 myQuest.myStory.ChoosePathString("after_quest");
@@ -169,20 +168,25 @@ public class BranchingDialogController : MonoBehaviour
 
     public void afterDialog()
     {
+        // Check if the quest is current active, and set the quest object to be active
         if ((bool)myQuest.myStory.variablesState["accepted_quest"])
         {
             myQuest.myQuestActive = true;
-            theQM.InitiatePlayerQuest();
+            theQM.InitiatePlayerQuest(); // Probably not necessary anymore
+
+            // Do something different if it is Erised. Quest is automatically completd once accepted
             if (myQuest.npcName == "Erised")
             {
                 theQM.SetNPCQuestStatus(myQuest.npcName, true);
             }
         }
+
+        // Check if the quest is complete
         if ((bool)myQuest.myStory.variablesState["completed_quest"])
         {
+            // Probably not necessary anymore. No NPCs give items anymore, so can remove (double check though)
             if (myQuest.npcGivesItem)
             {
-
                 if (theQM.playerInventory.myInventory.Contains(myQuest.sacrificeItem))
                 {
                     myQuest.sacrificeItem.itemCount += 1;
@@ -196,9 +200,10 @@ public class BranchingDialogController : MonoBehaviour
                 myQuest.npcGivesItem = false;
             }
 
+            // Update the quest object to reflect completion
             myQuest.myQuestActive = false;
             myQuest.myQuestCompleted = true;
-            theQM.CompleteQuest();
+            theQM.CompleteQuest(); // Probably not necessary anymore.
             theQM.SetNPCQuestStatus(myQuest.npcName, true);
 
         }
@@ -216,7 +221,7 @@ public class BranchingDialogController : MonoBehaviour
             // No more choices to make
             else
             {
-                dialogCanvas.SetActive(false);
+                HideCanvas();
             }
             // Scrolls to the bottom
             StartCoroutine(ScrollCo());
@@ -247,6 +252,7 @@ public class BranchingDialogController : MonoBehaviour
     }
     IEnumerator MakeNewDialog(string newDialog)
     {
+        Debug.Log("The next line = " + newDialog);
         // Instantiates the dialog object (the prefab) on the dialog holder
         scrollInProgress = true;
         DialogObject newDialogObject = Instantiate(dialogPrefab, dialogHolder.transform).GetComponent<DialogObject>();
@@ -284,6 +290,7 @@ public class BranchingDialogController : MonoBehaviour
         Button choiceButton = newChoiceObject.gameObject.GetComponent<Button>();
         if (choiceButton)
         {
+            Debug.Log("Adding Choices");
             // Adds the choice value to the listener that is in the onclick part of the button.
             choiceButton.onClick.AddListener(delegate { ChooseChoice(choiceValue); });
         }
@@ -302,4 +309,35 @@ public class BranchingDialogController : MonoBehaviour
         yield return null;
         dialogScrollbar.verticalNormalizedPosition = 0f;
     }
+
+    void BindFunction(string name)
+    {
+        switch (name)
+        {
+            // When items are given to Maple, Birch stops following the player
+            case "Maple":
+                var BirchAI = theQM.Birch.GetComponent<NPCFollowAI>();
+                myQuest.myStory.BindExternalFunction("giveItems", (int num) =>
+                {
+                    BirchAI.currentlyFollowing = false;
+                });
+                break;
+
+            case "Trout":
+                myQuest.myStory.BindExternalFunction("giveItems", (int num) =>
+                {
+                    myQuest.questItem.DecreaseAmount(num);
+                });
+                break;
+
+            default:
+                myQuest.myStory.BindExternalFunction("giveItems", (int num) =>
+                {
+                    myQuest.questItem.DecreaseAmount(num);
+                });
+                break;
+
+        }
+    }
+
 }

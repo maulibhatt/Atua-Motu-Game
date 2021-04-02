@@ -7,8 +7,9 @@ public class NPCFollowAI : MonoBehaviour
 {
 
     [SerializeField] Transform target;
-    [SerializeField] bool currentlyFollowing;
+    public bool currentlyFollowing;
     [SerializeField] private Animator myAnimation;
+    [SerializeField] private GameObject theBDC;
 
     NavMeshAgent agent;
     // Start is called before the first frame update
