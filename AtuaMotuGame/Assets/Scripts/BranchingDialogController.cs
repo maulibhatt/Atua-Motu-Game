@@ -24,7 +24,7 @@ public class BranchingDialogController : MonoBehaviour
     // [SerializeField] private Story myStory;
 
     // [Header("Quest Variables")]
-    [SerializeField] private QuestManager theQM;
+    //[SerializeField] private QuestManager theQM;
 
     private bool scrollInProgress = false;
 
@@ -93,15 +93,16 @@ public class BranchingDialogController : MonoBehaviour
 
     public void SetFinalBossStory()
     {
-        if (myQuest.myDialog)
-        {
-            DeleteOldDialogs();
-            myQuest.myStory = new Story(myQuest.myDialog.text);
-            myQuest.myStory.variablesState["trout"] = theQM.GetNPCQuestStatus("Trout");
-            myQuest.myStory.variablesState["erised"] = theQM.GetNPCQuestStatus("Erised");
-            myQuest.myStory.variablesState["birch"] = theQM.GetNPCQuestStatus("Birch");
-            myQuest.myStory.variablesState["bones"] = theQM.GetNPCQuestStatus("Bones");
-        }
+        // obsolete
+        // if (myQuest.myDialog)
+        // {
+        //     DeleteOldDialogs();
+        //     myQuest.myStory = new Story(myQuest.myDialog.text);
+        //     myQuest.myStory.variablesState["trout"] = theQM.GetNPCQuestStatus("Trout");
+        //     myQuest.myStory.variablesState["erised"] = theQM.GetNPCQuestStatus("Erised");
+        //     myQuest.myStory.variablesState["birch"] = theQM.GetNPCQuestStatus("Birch");
+        //     myQuest.myStory.variablesState["bones"] = theQM.GetNPCQuestStatus("Bones");
+        // }
     }
 
     // Sets the story. Is called every time the canvas is shown again
@@ -115,14 +116,14 @@ public class BranchingDialogController : MonoBehaviour
             BindFunction(myQuest.npcName);
 
              // Check if player's has the potential to be done the quest, then go 
-            if (theQM.CheckCompletion(myQuest.npcName))
+            if (GameState.CheckPotentialCompletion(myQuest.npcName))
             {
                 Debug.Log("has_items has been marked true");
                 myQuest.myStory.variablesState["has_items"] = true;
             }
 
             // If this NPC's quest is active, start at the quest instruction
-            if (myQuest.myQuestActive)
+            if (GameState.CheckActive(myQuest))
             {
                 myQuest.myStory.ChoosePathString("accepted");
             }
@@ -133,7 +134,7 @@ public class BranchingDialogController : MonoBehaviour
             //     myQuest.myStory.ChoosePathString("other_quest_active");
             // }
             // If the quest is completed
-            if (myQuest.myQuestCompleted)
+            if (GameState.CheckComplete(myQuest))
             {
                 myQuest.myStory.ChoosePathString("after_quest");
             }
@@ -171,14 +172,14 @@ public class BranchingDialogController : MonoBehaviour
         // Check if the quest is current active, and set the quest object to be active
         if ((bool)myQuest.myStory.variablesState["accepted_quest"])
         {
-            myQuest.myQuestActive = true;
-            theQM.InitiatePlayerQuest(); // Probably not necessary anymore
+            GameState.SetQuestStatus(myQuest, false);
+            //theQM.InitiatePlayerQuest(); // Probably not necessary anymore
 
             // Do something different if it is Erised. Quest is automatically completd once accepted
-            if (myQuest.npcName == "Erised")
-            {
-                theQM.SetNPCQuestStatus(myQuest.npcName, true);
-            }
+            // if (myQuest.npcName == "Erised")
+            // {
+            //     theQM.SetNPCQuestStatus(myQuest.npcName, true);
+            // }
         }
 
         // Check if the quest is complete
@@ -187,24 +188,14 @@ public class BranchingDialogController : MonoBehaviour
             // Probably not necessary anymore. No NPCs give items anymore, so can remove (double check though)
             if (myQuest.npcGivesItem)
             {
-                if (theQM.playerInventory.myInventory.Contains(myQuest.sacrificeItem))
-                {
-                    myQuest.sacrificeItem.itemCount += 1;
-                }
-                else
-                {
-                    theQM.playerInventory.myInventory.Add(myQuest.sacrificeItem);
-                    myQuest.sacrificeItem.itemCount += 1;
-                }
+                GameState.AddItem(myQuest.sacrificeItem);
                 //myQuest.sacrificeItem.IncreaseAmount(1);
                 myQuest.npcGivesItem = false;
             }
 
             // Update the quest object to reflect completion
-            myQuest.myQuestActive = false;
-            myQuest.myQuestCompleted = true;
-            theQM.CompleteQuest(); // Probably not necessary anymore.
-            theQM.SetNPCQuestStatus(myQuest.npcName, true);
+            GameState.SetQuestStatus(myQuest, true);
+
 
         }
 
@@ -316,10 +307,10 @@ public class BranchingDialogController : MonoBehaviour
         {
             // When items are given to Maple, Birch stops following the player
             case "Maple":
-                var BirchAI = theQM.Birch.GetComponent<NPCFollowAI>();
                 myQuest.myStory.BindExternalFunction("giveItems", (int num) =>
                 {
-                    BirchAI.currentlyFollowing = false;
+                    GameState.IsFollowedByBirch = false;
+                    GameState.LockBirchMovement = true;
                 });
                 break;
 

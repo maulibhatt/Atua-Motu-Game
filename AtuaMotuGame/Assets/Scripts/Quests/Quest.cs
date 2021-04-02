@@ -11,19 +11,11 @@ public class Quest : ScriptableObject
     public Story myStory;
 
     [Header("Quest Variables")]
-    //public QuestManager theQM;
-    public bool myQuestCompleted;
-    public bool myQuestActive;
 
     public InventoryItem questItem;
     public bool npcGivesItem;
     public InventoryItem sacrificeItem;
     public int itemCountNeeded;
     public string npcName;
-    // Start is called before the first frame update
-    void Start()
-    {
-        myQuestActive = false;
-        myQuestCompleted = false;
-    }
+
 }

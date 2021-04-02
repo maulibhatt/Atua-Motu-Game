@@ -24,8 +24,8 @@ public class QuestManager : MonoBehaviour
         birch = false;
         for (int i = 0; i < questList.Count; i++)
         {
-            questList[i].myQuestActive = false;
-            questList[i].myQuestCompleted = false;
+            //questList[i].myQuestActive = false;
+            //questList[i].myQuestCompleted = false;
         }
     }
 

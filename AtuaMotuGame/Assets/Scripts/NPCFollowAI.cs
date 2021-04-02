@@ -10,6 +10,7 @@ public class NPCFollowAI : MonoBehaviour
     public bool currentlyFollowing;
     [SerializeField] private Animator myAnimation;
     [SerializeField] private GameObject theBDC;
+    [SerializeField] private GameObject BirchNPC;
 
     NavMeshAgent agent;
     // Start is called before the first frame update
@@ -21,12 +22,16 @@ public class NPCFollowAI : MonoBehaviour
 		agent.updateUpAxis = false;
         currentlyFollowing = false;
         myAnimation.SetFloat("Speed", 0);
+        if (GameState.LockBirchMovement)
+        {
+            BirchNPC.SetActive(false);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (currentlyFollowing)
+        if (!GameState.LockBirchMovement && currentlyFollowing)
         {
             agent.SetDestination(target.position);
             UpdateAnimation();
@@ -35,8 +40,9 @@ public class NPCFollowAI : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && !other.isTrigger)
+        if (!GameState.LockBirchMovement && other.CompareTag("Player") && !other.isTrigger)
         {
+            GameState.IsFollowedByBirch = true;
             currentlyFollowing = true;
             myAnimation.SetFloat("Speed", agent.speed);
         }

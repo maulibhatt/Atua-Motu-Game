@@ -145,6 +145,7 @@ MonoBehaviour:
   currentlyFollowing: 0
   myAnimation: {fileID: 0}
   theBDC: {fileID: 0}
+  BirchNPC: {fileID: 104357546}
 --- !u!195 &104357548
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -9463,12 +9464,12 @@ PrefabInstance:
     - target: {fileID: 1141346315422846082, guid: d0c4416cd758ffb4ca6c6b3df416ee01,
         type: 3}
       propertyPath: position.x
-      value: -35
+      value: -19
       objectReference: {fileID: 0}
     - target: {fileID: 1141346315422846082, guid: d0c4416cd758ffb4ca6c6b3df416ee01,
         type: 3}
       propertyPath: position.y
-      value: -20
+      value: -7.5
       objectReference: {fileID: 0}
     - target: {fileID: 5915280577497187625, guid: d0c4416cd758ffb4ca6c6b3df416ee01,
         type: 3}
@@ -9715,7 +9716,6 @@ MonoBehaviour:
   choiceHolder: {fileID: 1587454562}
   dialogScrollbar: {fileID: 1587454561}
   myQuest: {fileID: 0}
-  theQM: {fileID: 1654144512}
 --- !u!1 &1213359226
 GameObject:
   m_ObjectHideFlags: 0
@@ -59800,6 +59800,7 @@ MonoBehaviour:
   bones: 0
   Birch: {fileID: 104357546}
   questList:
+  - {fileID: 11400000, guid: 1453fd1c973ec4d7d887513c3677dc4d, type: 2}
   - {fileID: 11400000, guid: 1453fd1c973ec4d7d887513c3677dc4d, type: 2}
 --- !u!1001 &1852635782
 PrefabInstance:
