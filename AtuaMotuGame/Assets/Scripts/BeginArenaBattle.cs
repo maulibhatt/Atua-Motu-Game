@@ -15,4 +15,14 @@ public class BeginArenaBattle : Interactable
             player.transform.position = destination.position;
         }
     }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        // If the other collider is the player
+        if (other.CompareTag("Player") && !other.isTrigger)
+        {
+            playerInRange = false;
+            clue.Raise();
+        }
+    }
 }
