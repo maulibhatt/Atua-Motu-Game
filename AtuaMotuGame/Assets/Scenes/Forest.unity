@@ -144,6 +144,7 @@ MonoBehaviour:
   target: {fileID: 630851976}
   currentlyFollowing: 0
   myAnimation: {fileID: 0}
+  theBDC: {fileID: 0}
 --- !u!195 &104357548
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -8818,8 +8819,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 576630210}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.3025, y: -4.3016, z: 0}
-  m_LocalScale: {x: 3.409632, y: 6.2062445, z: 1}
+  m_LocalPosition: {x: 12.3493, y: -4.3795, z: 0}
+  m_LocalScale: {x: 3.0039408, y: 5.239442, z: 1}
   m_Children: []
   m_Father: {fileID: 613079324}
   m_RootOrder: 1
@@ -9585,12 +9586,12 @@ PrefabInstance:
     - target: {fileID: 5114537788320671046, guid: aefb8c270523249ada2a8c4d498fbbc8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.01
+      value: 12.1
       objectReference: {fileID: 0}
     - target: {fileID: 5114537788320671046, guid: aefb8c270523249ada2a8c4d498fbbc8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.19
+      value: -3.41
       objectReference: {fileID: 0}
     - target: {fileID: 5114537788320671046, guid: aefb8c270523249ada2a8c4d498fbbc8,
         type: 3}
@@ -59798,7 +59799,8 @@ MonoBehaviour:
   erised: 0
   bones: 0
   Birch: {fileID: 104357546}
-  questList: []
+  questList:
+  - {fileID: 11400000, guid: 1453fd1c973ec4d7d887513c3677dc4d, type: 2}
 --- !u!1001 &1852635782
 PrefabInstance:
   m_ObjectHideFlags: 0
