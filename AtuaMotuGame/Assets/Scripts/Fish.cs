@@ -15,7 +15,7 @@ public class Fish : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.time - startTime > 4)
+        if (Time.time - startTime > 3)
         {
             Destroy(gameObject);
         }

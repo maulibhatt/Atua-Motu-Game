@@ -38,6 +38,17 @@ public static class GameState
         set { lockBirchMovement = value;}
     }
 
+    public static int SearchItem(string item) 
+    {
+        for (int i = 0; i < inventory.Count; ++i)
+        {
+            if (inventory[i].Item.itemName == item)
+            {
+                return inventory[i].Quantity;
+            }
+        }
+        return 0;
+    }
 
     public static void AddItem(InventoryItem item) 
     {
@@ -56,6 +67,23 @@ public static class GameState
         }
     }
 
+    public static void RemoveItem(InventoryItem item, int amount)
+    {
+        for (int i = 0; i < inventory.Count; ++i)
+        {
+            if (inventory[i].Item == item)
+            {
+                if (inventory[i].Quantity == amount)
+                {
+                    inventory.RemoveAt(i);
+                }
+                else
+                { 
+                    inventory[i].Quantity -= amount;
+                }
+            }
+        }
+    }
     public static void AddQuest(Quest quest)
     {
         bool foundItem = false;
@@ -76,6 +104,7 @@ public static class GameState
     // True is set complete, false is set active
     public static void SetQuestStatus(Quest quest, bool status)
     {
+
         for (int i = 0; i < questList.Count; ++i)
         {
             if (questList[i].Quest == quest)
@@ -85,7 +114,8 @@ public static class GameState
                     questList[i].Complete = true;
                     questList[i].Active = false;
                 }
-                else{
+                else
+                {
                     questList[i].Active = true;
                 }
                 
@@ -130,7 +160,44 @@ public static class GameState
                 {   
                     return false;
                 }
-            
+            case "Trout":
+                if (SearchItem("Blue Fish") >= 10)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            case "Mantis":
+                if (SearchItem("Carrot") >= 12)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            case "MsPie":
+                if (SearchItem("Apple") >= 6)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            case "Igneous":
+                Debug.Log("Here2");
+                if (SearchItem("Bone Necklace") >= 3)
+                {
+                    Debug.Log("Here");
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             default:
                 return false;
 
@@ -168,6 +235,7 @@ public class GameQuest
     Quest quest;
     bool complete;
     bool active;
+
 
     public GameQuest(Quest quest, bool complete, bool active)
     {
