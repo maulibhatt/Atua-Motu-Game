@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96e6bef13ed05443f991da5d060fc9bd, type: 3}
   m_Name: BeachQuest
   m_EditorClassIdentifier: 
-  myDialog: {fileID: 4900000, guid: c3eb2c3ff10688f45b6cc6213d2a1ef5, type: 3}
+  myDialog: {fileID: 4900000, guid: e23431128bae44e1ea73a6ef0286c0bc, type: 3}
   questItem: {fileID: 11400000, guid: 9d6eabe6c1369e347a723490839dc113, type: 2}
   npcGivesItem: 0
   sacrificeItem: {fileID: 0}

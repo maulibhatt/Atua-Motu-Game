@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96e6bef13ed05443f991da5d060fc9bd, type: 3}
   m_Name: AppleQuest
   m_EditorClassIdentifier: 
-  myDialog: {fileID: 4900000, guid: d5c7ee66443483340801b3336c3f8c6d, type: 3}
+  myDialog: {fileID: 4900000, guid: e1e7605bc2a714e60b359893c318bbf5, type: 3}
   questItem: {fileID: 11400000, guid: 6fe470922670c4960a17ef2644e26129, type: 2}
   npcGivesItem: 0
   sacrificeItem: {fileID: 0}
