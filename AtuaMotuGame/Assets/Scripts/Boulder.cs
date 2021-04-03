@@ -24,6 +24,7 @@ public class Boulder : MonoBehaviour
         {
             if (!other.gameObject.GetComponent<PlayerBoulderManager>().getSafety())
             {
+                GameObject.Find("HealthManager").GetComponent<HealthManager>().removeLife();
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
         }
