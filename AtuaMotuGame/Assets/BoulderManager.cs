@@ -38,7 +38,6 @@ public class BoulderManager : MonoBehaviour
                 boulder.transform.position = pos;
                 count += offset;
             }
-            Debug.Log(c);
         }
         else
         {
