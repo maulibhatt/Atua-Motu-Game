@@ -18,6 +18,12 @@ Trout: Can you catch 10 blue fish and bring them to me? -> questions
 * {has_items == true} [Give fish] You: Here you go!
     ~giveItems(10)
     Trout: Perfect! -> after_quest
+    
+* [How to catch] You: How do I catch the fish?
+    Trout: The water is fairly shallow near the beach. 
+    Trout: If you wade through, you'll be able to catch the fish. -> questions
+
++ [Leave] You: Okay, I'll try to catch them for you. -> END
 
 == declined == 
 Trout: Alright, come back when you can. -> endpart
