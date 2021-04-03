@@ -20,7 +20,8 @@ Igneous: I fear that this volcano will fall apart if we don't do something soon.
 
 * {has_items == true} [Give bone necklaces] You: I got the necklaces!
     ~giveItems(3)
-    Igneous: Alex! You just saved the day! -> after_quest
+    Igneous: Alex! You just saved the day! 
+    -> after_quest
     
 
 * [What happened] You: What happened? How did the volcano get like this?

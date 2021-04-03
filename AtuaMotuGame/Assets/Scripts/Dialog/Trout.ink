@@ -17,7 +17,8 @@ Trout: Can you catch 10 blue fish and bring them to me? -> questions
 == questions ==
 * {has_items == true} [Give fish] You: Here you go!
     ~giveItems(10)
-    Trout: Perfect! -> after_quest
+    Trout: Perfect! 
+    -> after_quest
     
 * [How to catch] You: How do I catch the fish?
     Trout: The water is fairly shallow near the beach. 
