@@ -20,8 +20,10 @@ Maple: Oh thank goodness you're here! Can you help me find my sister?
     }
 Maple: My little sister, Birch, wandered into the forest, and I think she's lost. 
 Maple: I don't think she will be able to get out by herself. Even I have trouble finding my way around this maze of trees!
+
 Maple: When you find her, let her know I sent you and she will follow you out.
-Maple: The forest opens up at different points along this outer path, so you can come out from any exit point and find your way to me. 
+
+Maple: The forest opens up at different points on this path where you can come out and find your way to me. 
 
 ->endpart
 
