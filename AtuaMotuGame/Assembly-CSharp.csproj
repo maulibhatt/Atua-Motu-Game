@@ -61,6 +61,7 @@
      <Compile Include="Assets\Scripts\SceneTransition.cs" />
      <Compile Include="Assets\Scripts\Sign.cs" />
      <Compile Include="Assets\Scripts\Boulder.cs" />
+     <Compile Include="Assets\BossDialogObject.cs" />
      <Compile Include="Assets\Scripts\Quests\Quest.cs" />
      <Compile Include="Assets\Scripts\FishSpawns.cs" />
      <Compile Include="Assets\Scripts\PauseMenuManager.cs" />
@@ -69,6 +70,7 @@
      <Compile Include="Assets\Scripts\InteractionClue.cs" />
      <Compile Include="Assets\Scripts\Fish.cs" />
      <Compile Include="Assets\Scripts\EnemyMovement.cs" />
+     <Compile Include="Assets\BossChoiceObject.cs" />
      <Compile Include="Assets\Scripts\Interactable.cs" />
      <Compile Include="Assets\Scripts\GameState.cs" />
      <Compile Include="Assets\Scripts\Inventory\InventorySlot.cs" />
@@ -86,10 +88,8 @@
      <Compile Include="Assets\Scripts\BranchingDialogController.cs" />
      <Compile Include="Assets\LedgeCollision.cs" />
      <Compile Include="Assets\Scripts\Inventory\PhysicalInventoryItem.cs" />
-     <Compile Include="Assets\Scripts\Inventory\InventoryManager.cs" />
      <Compile Include="Assets\Scripts\FinalBossDialog.cs" />
-     <Compile Include="Assets\BossChoiceObject.cs" />
-     <Compile Include="Assets\BossDialogObject.cs" />
+     <Compile Include="Assets\Scripts\Inventory\InventoryManager.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

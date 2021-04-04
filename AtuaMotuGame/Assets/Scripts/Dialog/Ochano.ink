@@ -3,8 +3,8 @@ VAR neutral = 0
 VAR bad = 0
 VAR free = "both"
 VAR strength = 5
+Ochano: "WHO DARES DISTURB MY SLUMBER?"
 
-Ochano: "WHO DARES DISTURBS MY SLUMBER?"
 * [Great hero] You: "I am Alex, great hero of Atua Motu. Enemy of anyone who disturbs its peace!"
     ~ good = good + 1
     -> q2
@@ -104,38 +104,46 @@ Ochano: "WHAT SHOULD I SET ON FIRE?"
 
 == neutral_end ==
 { strength > 5:
-    You strengthened Ochano by adding fire to his fire source, the Volcano. Ochano vows to set Atua Motu ablaze. 
+    You strengthened Ochano by adding fire to his fire source, the Volcano. 
+    Ochano vows to set Atua Motu ablaze. 
     }
 
 { strength < 5:
-    Ochano was weakened when you sent his fire into ice. It melted the paradise for all to enjoy.
+    Ochano was weakened when you sent his fire into the ice caves. 
+    The fire melted the paradise for all to enjoy.
     }
     
 { strength == 5: 
-    The sand heats up, and some of the water from the beach evaporates. Nothing else changes. You live, but the spirits are still trapped.
+    The sand heats up, and some of the water from the beach evaporates. 
+    Nothing else changes. You live, but the spirits are still trapped.
     }
     
 -> END
 
 == good_end ==
 Ochano: "I WILL FULFILL YOUR DEMANDS IF YOU AGREE TO STAY HERE, TRAPPED WITH ME FOR ETERNITY."
-Ochano: "OF COURSE, IF YOU WITHDRAW YOUR REQUEST, I WILL SET YOU FREE."
+Ochano: "IF YOU WITHDRAW YOUR REQUEST, I WILL SET YOU FREE."
 
 * {free == "bad"} [Activate temple crystal] You: "I want you to activate the sacred crystal on the temple."
     Ochano: "VERY WELL. IT IS DONE."
-    Ochano frees his evil followers into the world, where they wreak havoc on more than just Atua Motu. You stay trapped on the island with the human spirits and Ochano.
+    Ochano frees his evil followers into the world, where they wreak havoc on more than just Atua Motu.
+    You stay trapped on the island with the human spirits and Ochano.
     {strength < 5:
-        On the bright side, the ice caves have melted back into the paradise, and you and the human spirits can spend your days with an island oasis nearby.
+        On the bright side, the ice caves have melted back into the paradise.
+        You and the human spirits can spend your days with an island oasis nearby.
         }
     -> END
     
 * {free == "both"} [Release all spirits] You: I want you to release all of the spirits on the island.
     Ochano: "VERY WELL. IT IS DONE."
-    Ochano traps you on the island forever, but he frees all spirits into the world, including his evil followers and the trapped human spirits. His followers wreak havoc, but the trapped humans are finally free. -> END
+    Ochano traps you on the island forever, but he frees all spirits into the world. 
+    His evil spirit followers wreak havoc, but the trapped humans spirits are finally free. -> END
     
 * {free == "good"} [Resurrect the Guardian] You: I want you to resurrect the old Guardian.
     OCHANO: "VERY WELL. IT IS DONE."
-    Ochano resurrects the old Guardian of Atua Motu. They battle, and Ochano is banished from the island along with his evil followers. The trapped human spirits are set free, and the Atua Motu is protected once more. -> END
+    Ochano resurrects the old Guardian of Atua Motu. 
+    They battle, and Ochano is banished from the island along with his evil followers. 
+    The trapped human spirits are set free, and Atua Motu is protected once more. -> END
     
 * [Escape Atua Motu] You: I want to escape Atua Motu.
     Ochano: "VERY WELL. IT IS DONE."
@@ -147,25 +155,32 @@ Ochano: "IF YOU DON'T, I WILL TAKE EVERY SPIRIT ON ATUA MOTU AS SACRIFICE INSTEA
 
 * [Sacrifice yourself] You: I will sacrifice myself.
     {free == "bad" and strength < 5:
-    Ochano kills you and frees his evil followers into the world where they can wreak havoc. On the bright side, the trapped human spirits can enjoy the paradise that Ochano melted with his fire.
+    Ochano kills you and frees his evil followers into the world where they can wreak havoc. 
+    On the bright side, the trapped human spirits can enjoy the paradise that Ochano melted with his fire.
     }
     {free == "bad" and strength > 5:
-    Ochano kills you and frees his evil followers into the world where they can wreak havoc. Unfortunately, Ochano's power has increased and the trapped human spirits are tortured by him at every opportunity.
+    Ochano kills you and frees his evil followers into the world where they can wreak havoc. 
+    Unfortunately, Ochano's power has increased and the trapped human spirits are tortured by him at every opportunity.
     }
     {free == "bad" and strength == 5:
-    Ochano kills you and frees his evil followers into the world where they can wreak havoc. The trapped human spirits are still under Ochano's rule.
+    Ochano kills you and frees his evil followers into the world where they can wreak havoc. 
+    The trapped human spirits are still under Ochano's rule.
     }
     {free == "good" and strength < 5:
-    Ochano kills you but frees the trapped human spirits. His fire energy has been weakened by the ice from the caves, so he loses the tight control he had on his evil followers. 
+    Ochano kills you but frees the trapped human spirits. 
+    His fire energy has been weakened by the ice from the caves, so he loses the tight control he had on his evil followers. 
     }
     {free == "good" and strength > 5:
-    Ochano kills you but frees the trapped human spirits. His fire energy has been strengthened by the volcano, and he punishes his evil followers for not better preventing the escape of the human spirits.
+    Ochano kills you but frees the trapped human spirits. 
+    His fire energy has been strengthened by the volcano, and he punishes his evil followers for not better preventing human spirits' escape.
     }
     {free == "good" and strength == 5:
-    Ochano kills you but frees the trapped human spirits. His evil followers still haunt Atua Motu and Ochano resumes his slumber.
+    Ochano kills you but frees the trapped human spirits. 
+    His evil followers still haunt Atua Motu and Ochano resumes his slumber.
     }
     {free == "both":
-    Ochano kills you but frees all of the spirits. The spirits that used to be his evil followers wreak havoc on the rest of the world, but the trapped human spirits are finally free.
+    Ochano kills you but frees all of the spirits. 
+    The spirits that used to be his evil followers wreak havoc on the rest of the world, but the trapped human spirits are finally free.
     }
     -> END
     

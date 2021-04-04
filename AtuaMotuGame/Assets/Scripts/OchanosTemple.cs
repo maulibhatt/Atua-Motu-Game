@@ -8,10 +8,13 @@ public class OchanosTemple : MonoBehaviour
     // Start is called before the first frame update
     public bool playerInRange;
     public SignalSender clue;
+    private FinalBossDialog BossDialogController;
+    private GameObject player;
     
     void Start()
     {
-        
+        player = GameObject.Find("Player");
+        BossDialogController = GetComponent<FinalBossDialog>();
     }
 
     // Update is called once per frame
@@ -21,6 +24,9 @@ public class OchanosTemple : MonoBehaviour
         {
             // activate temple
             Debug.Log("Temple Canvas activate!");
+            BossDialogController.EnableBossCanvas();
+            player.GetComponent<PlayerMovement>().EnablePlayerMovement();
+            playerInRange = false;
             
         }
     }

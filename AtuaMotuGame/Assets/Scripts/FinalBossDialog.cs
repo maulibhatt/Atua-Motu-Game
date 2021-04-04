@@ -24,7 +24,8 @@ public class FinalBossDialog : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        newGameButton.SetActive(false);
+        enableSpacebar = false;
     }
 
     // Update is called once per frame
@@ -32,14 +33,14 @@ public class FinalBossDialog : MonoBehaviour
     {
         if (enableSpacebar && Input.GetKeyDown(KeyCode.Space))
         {
-
+            RefreshView();
         }
     }
 
     public void EnableBossCanvas()
     {
+        finalBossCanvas.SetActive(true);
         SetStory();
-
         RefreshView();
     }
     public void SetStory()
@@ -51,17 +52,25 @@ public class FinalBossDialog : MonoBehaviour
         }
     }
 
+    public void EndConfrontation()
+    {
+        newGameButton.SetActive(true);
+    }
+
     public void RefreshView()
     {
         // Check if story can continue
         if (myStory.canContinue)
         {
+            spaceText.SetActive(true);
+            enableSpacebar = true;
             // If it can, then show the next line as a mew dialog
             MakeNewDialog(myStory.Continue());
         }
         else
         {
-
+            spaceText.SetActive(false);
+            enableSpacebar = false;
             if (myStory.currentChoices.Count > 0)
             {
                 MakeNewChoices();
@@ -69,12 +78,12 @@ public class FinalBossDialog : MonoBehaviour
             // No more choices to make
             else
             {
-                //EndConfrontation();
+                EndConfrontation();
             }
-            // Scrolls to the bottom
-            StartCoroutine(ScrollCo());
         }
-            
+        // Scrolls to the bottom
+        dialogScrollbar.verticalNormalizedPosition = 0f;
+        StartCoroutine(ScrollCo());    
     }
 
 
@@ -137,6 +146,7 @@ public class FinalBossDialog : MonoBehaviour
     {
         // waits one frame
         yield return null;
+        Debug.Log("Scrolling to the bottom");
         dialogScrollbar.verticalNormalizedPosition = 0f;
     }
 
