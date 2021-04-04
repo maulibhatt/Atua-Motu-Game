@@ -8,6 +8,9 @@ public static class GameState
     static Vector2 playerPosition;
     static List<InvItem> inventory = new List<InvItem>();
     static List<GameQuest> questList = new List<GameQuest>();
+    static List<bool> apples = new List<bool>(new bool[6]);
+    static bool isFollowedByBirch = false;
+    static bool lockBirchMovement = false;
 
     public static Vector2 PlayerPosition
     {
@@ -25,6 +28,34 @@ public static class GameState
         get { return questList; }
         set { questList = value; }
     }
+    public static bool IsFollowedByBirch
+    {
+        get { return isFollowedByBirch;}
+        set { isFollowedByBirch = value;}
+    }
+    public static bool LockBirchMovement
+    {
+        get { return lockBirchMovement;}
+        set { lockBirchMovement = value;}
+    }
+
+    public static List<bool> Apples
+    {
+        get { return apples; }
+        set { apples = value; }
+    }
+    public static int SearchItem(string item) 
+    {
+        for (int i = 0; i < inventory.Count; ++i)
+        {
+            if (inventory[i].Item.itemName == item)
+            {
+                return inventory[i].Quantity;
+            }
+        }
+        return 0;
+    }
+
     public static void AddItem(InventoryItem item) 
     {
         bool foundItem = false;
@@ -42,6 +73,23 @@ public static class GameState
         }
     }
 
+    public static void RemoveItem(InventoryItem item, int amount)
+    {
+        for (int i = 0; i < inventory.Count; ++i)
+        {
+            if (inventory[i].Item == item)
+            {
+                if (inventory[i].Quantity == amount)
+                {
+                    inventory.RemoveAt(i);
+                }
+                else
+                { 
+                    inventory[i].Quantity -= amount;
+                }
+            }
+        }
+    }
     public static void AddQuest(Quest quest)
     {
         bool foundItem = false;
@@ -49,25 +97,144 @@ public static class GameState
         {
             if (questList[i].Quest == quest)
             {
-                foundItem = false;
+                foundItem = true;
                 break;
             }
         }
         if (foundItem == false)
         {
-            questList.Add(new GameQuest(quest, false));
+            questList.Add(new GameQuest(quest, false, false));
         }
     }
 
-    public static void SetQuestComplete(Quest quest)
+    // True is set complete, false is set active
+    public static void SetQuestStatus(Quest quest, bool status)
+    {
+
+        for (int i = 0; i < questList.Count; ++i)
+        {
+            if (questList[i].Quest == quest)
+            {
+                if (status == true)
+                {
+                    questList[i].Complete = true;
+                    questList[i].Active = false;
+                    Debug.Log(quest.npcName + " quest complete.");
+                }
+                else
+                {
+                    questList[i].Active = true;
+                    Debug.Log(quest.npcName + " quest active.");
+                }
+                
+                break;
+            }
+        }
+    }
+
+    public static bool CheckActive(Quest quest)
     {
         for (int i = 0; i < questList.Count; ++i)
         {
             if (questList[i].Quest == quest)
             {
-                questList[i].Complete = true;
-                break;
+                return questList[i].Active;
             }
+        }
+        return false;
+    }
+
+    public static bool CheckComplete(Quest quest)
+    {
+        for (int i = 0; i < questList.Count; ++i)
+        {
+            if (questList[i].Quest == quest)
+            {
+                return questList[i].Complete;
+            }
+        }
+        return false;
+    }
+
+    public static bool CheckPotentialCompletion(string name)
+    {
+        switch (name) {
+            case "Maple":
+                if (isFollowedByBirch)
+                {
+                    return true;
+                }
+                else
+                {   
+                    return false;
+                }
+            case "Trout":
+                if (SearchItem("Blue Fish") >= 10)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            case "Mantis":
+                if (SearchItem("Carrot") >= 12)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            case "MsPie":
+                if (SearchItem("Apple") >= 6)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            case "Igneous":
+                if (SearchItem("Bone Necklace") >= 3)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            case "Bones":
+                if (SearchItem("Tablet") >= 1)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            case "Erised":
+                if (SearchItem("Blue Gem") >= 8)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            case "Rocky":
+                if (SearchItem("Rock Climbing Glove") >= 2)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            default:
+                return false;
+
+
         }
     }
 }
@@ -100,13 +267,14 @@ public class GameQuest
 {
     Quest quest;
     bool complete;
-    Story myStory;
-    int itemsStillNeeded;
+    bool active;
 
-    public GameQuest(Quest quest, bool complete)
+
+    public GameQuest(Quest quest, bool complete, bool active)
     {
         this.quest = quest;
         this.complete = complete;
+        this.active = active;
     }
 
     public Quest Quest
@@ -119,6 +287,12 @@ public class GameQuest
     {
         get { return complete; }
         set { complete = value; }
+    }
+
+    public bool Active
+    {
+        get {return active; }
+        set { active = value;}
     }
 }
 

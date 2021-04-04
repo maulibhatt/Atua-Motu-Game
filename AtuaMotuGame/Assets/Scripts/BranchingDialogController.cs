@@ -4,6 +4,7 @@ using UnityEngine;
 using Ink.Runtime;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 public class BranchingDialogController : MonoBehaviour
 {
@@ -24,7 +25,7 @@ public class BranchingDialogController : MonoBehaviour
     // [SerializeField] private Story myStory;
 
     // [Header("Quest Variables")]
-    [SerializeField] private QuestManager theQM;
+    //[SerializeField] private QuestManager theQM;
 
     private bool scrollInProgress = false;
 
@@ -93,15 +94,16 @@ public class BranchingDialogController : MonoBehaviour
 
     public void SetFinalBossStory()
     {
-        if (myQuest.myDialog)
-        {
-            DeleteOldDialogs();
-            myQuest.myStory = new Story(myQuest.myDialog.text);
-            myQuest.myStory.variablesState["trout"] = theQM.GetNPCQuestStatus("Trout");
-            myQuest.myStory.variablesState["erised"] = theQM.GetNPCQuestStatus("Erised");
-            myQuest.myStory.variablesState["birch"] = theQM.GetNPCQuestStatus("Birch");
-            myQuest.myStory.variablesState["bones"] = theQM.GetNPCQuestStatus("Bones");
-        }
+        // obsolete
+        // if (myQuest.myDialog)
+        // {
+        //     DeleteOldDialogs();
+        //     myQuest.myStory = new Story(myQuest.myDialog.text);
+        //     myQuest.myStory.variablesState["trout"] = theQM.GetNPCQuestStatus("Trout");
+        //     myQuest.myStory.variablesState["erised"] = theQM.GetNPCQuestStatus("Erised");
+        //     myQuest.myStory.variablesState["birch"] = theQM.GetNPCQuestStatus("Birch");
+        //     myQuest.myStory.variablesState["bones"] = theQM.GetNPCQuestStatus("Bones");
+        // }
     }
 
     // Sets the story. Is called every time the canvas is shown again
@@ -112,29 +114,31 @@ public class BranchingDialogController : MonoBehaviour
         {
             DeleteOldDialogs();
             myQuest.myStory = new Story(myQuest.myDialog.text);
+            BindFunction(myQuest.npcName);
 
-            // When items are given, the inventory reflects the change
-            myQuest.myStory.BindExternalFunction("giveItems", (int num) =>
+             // Check if player's has the potential to be done the quest, then go 
+            if (GameState.CheckPotentialCompletion(myQuest.npcName))
             {
-                myQuest.questItem.DecreaseAmount(num);
-            });
+                Debug.Log("has_items has been marked true");
+                myQuest.myStory.variablesState["has_items"] = true;
+            }
+            else {
+                myQuest.myStory.variablesState["has_items"] = false;
+            }
 
             // If this NPC's quest is active, start at the quest instruction
-            if (myQuest.myQuestActive)
+            if (GameState.CheckActive(myQuest))
             {
-                // Check if player's inventory has the right number of items
-                if (myQuest.questItem.itemCount >= myQuest.itemCountNeeded)
-                {
-                    myQuest.myStory.variablesState["has_items"] = true;
-                }
-                myQuest.myStory.ChoosePathString("quest");
+                myQuest.myStory.ChoosePathString("accepted");
             }
+
             // If another NPC's quest is active, say "Find me after your quest"
-            if (!myQuest.myQuestActive && theQM.PlayerQuestStatus())
-            {
-                myQuest.myStory.ChoosePathString("other_quest_active");
-            }
-            if (myQuest.myQuestCompleted)
+            // if (!myQuest.myQuestActive && theQM.PlayerQuestStatus())
+            // {
+            //     myQuest.myStory.ChoosePathString("other_quest_active");
+            // }
+            // If the quest is completed
+            if (GameState.CheckComplete(myQuest))
             {
                 myQuest.myStory.ChoosePathString("after_quest");
             }
@@ -169,37 +173,32 @@ public class BranchingDialogController : MonoBehaviour
 
     public void afterDialog()
     {
+        // Check if the quest is current active, and set the quest object to be active
         if ((bool)myQuest.myStory.variablesState["accepted_quest"])
         {
-            myQuest.myQuestActive = true;
-            theQM.InitiatePlayerQuest();
-            if (myQuest.npcName == "Erised")
-            {
-                theQM.SetNPCQuestStatus(myQuest.npcName, true);
-            }
+            GameState.SetQuestStatus(myQuest, false);
+            //theQM.InitiatePlayerQuest(); // Probably not necessary anymore
+
+            // Do something different if it is Erised. Quest is automatically completd once accepted
+            // if (myQuest.npcName == "Erised")
+            // {
+            //     theQM.SetNPCQuestStatus(myQuest.npcName, true);
+            // }
         }
+
+        // Check if the quest is complete
         if ((bool)myQuest.myStory.variablesState["completed_quest"])
         {
+            // Probably not necessary anymore. No NPCs give items anymore, so can remove (double check though)
             if (myQuest.npcGivesItem)
             {
-
-                if (theQM.playerInventory.myInventory.Contains(myQuest.sacrificeItem))
-                {
-                    myQuest.sacrificeItem.itemCount += 1;
-                }
-                else
-                {
-                    theQM.playerInventory.myInventory.Add(myQuest.sacrificeItem);
-                    myQuest.sacrificeItem.itemCount += 1;
-                }
+                GameState.AddItem(myQuest.sacrificeItem);
                 //myQuest.sacrificeItem.IncreaseAmount(1);
                 myQuest.npcGivesItem = false;
             }
 
-            myQuest.myQuestActive = false;
-            myQuest.myQuestCompleted = true;
-            theQM.CompleteQuest();
-            theQM.SetNPCQuestStatus(myQuest.npcName, true);
+            // Update the quest object to reflect completion
+            GameState.SetQuestStatus(myQuest, true);
 
         }
 
@@ -216,7 +215,7 @@ public class BranchingDialogController : MonoBehaviour
             // No more choices to make
             else
             {
-                dialogCanvas.SetActive(false);
+                HideCanvas();
             }
             // Scrolls to the bottom
             StartCoroutine(ScrollCo());
@@ -247,6 +246,7 @@ public class BranchingDialogController : MonoBehaviour
     }
     IEnumerator MakeNewDialog(string newDialog)
     {
+        Debug.Log("The next line = " + newDialog);
         // Instantiates the dialog object (the prefab) on the dialog holder
         scrollInProgress = true;
         DialogObject newDialogObject = Instantiate(dialogPrefab, dialogHolder.transform).GetComponent<DialogObject>();
@@ -302,4 +302,70 @@ public class BranchingDialogController : MonoBehaviour
         yield return null;
         dialogScrollbar.verticalNormalizedPosition = 0f;
     }
+
+    void BindFunction(string name)
+    {
+        switch (name)
+        {
+            // When items are given to Maple, Birch stops following the player
+            case "Maple":
+                myQuest.myStory.BindExternalFunction("giveItems", (int num) =>
+                {
+                    GameState.IsFollowedByBirch = false;
+                    GameState.LockBirchMovement = true;
+                });
+                break;
+
+            case "Trout":
+                myQuest.myStory.BindExternalFunction("giveItems", (int num) =>
+                {
+                    GameState.RemoveItem(myQuest.questItem, num);
+                });
+                break;
+            case "Mantis":
+                myQuest.myStory.BindExternalFunction("giveItems", (int num) =>
+                {
+                    GameState.RemoveItem(myQuest.questItem, num);
+                });
+                break;
+            case "MsPie":
+                myQuest.myStory.BindExternalFunction("giveItems", (int num) =>
+                {
+                    GameState.RemoveItem(myQuest.questItem, num);
+                });
+                break;
+            case "Igneous":
+                myQuest.myStory.BindExternalFunction("giveItems", (int num) =>
+                {
+                    GameState.RemoveItem(myQuest.questItem, num);
+                });
+                break;
+            case "Bones":
+                myQuest.myStory.BindExternalFunction("giveItems", (int num) =>
+                {
+                    GameState.RemoveItem(myQuest.questItem, num);
+                });
+                break;
+            case "Erised":
+                myQuest.myStory.BindExternalFunction("giveItems", (int num) =>
+                {
+                    GameState.RemoveItem(myQuest.questItem, num);
+                });
+                break;
+            case "Rocky":
+                myQuest.myStory.BindExternalFunction("giveItems", (int num) =>
+                {
+                    GameState.RemoveItem(myQuest.questItem, num);
+                });
+                break;
+            default:
+                myQuest.myStory.BindExternalFunction("giveItems", (int num) =>
+                {
+                    myQuest.questItem.DecreaseAmount(num);
+                });
+                break;
+
+        }
+    }
+
 }

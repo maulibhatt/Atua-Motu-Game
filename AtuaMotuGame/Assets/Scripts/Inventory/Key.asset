@@ -16,4 +16,4 @@ MonoBehaviour:
   itemDescription: I wonder what door this key leads to
   itemImage: {fileID: 21300000, guid: 531320e1661f04428a093707ef0ae0ab, type: 3}
   itemCount: 1
-  character: Erised
+  character: 

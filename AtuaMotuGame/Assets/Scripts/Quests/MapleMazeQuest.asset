@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96e6bef13ed05443f991da5d060fc9bd, type: 3}
+  m_Name: MapleMazeQuest
+  m_EditorClassIdentifier: 
+  myDialog: {fileID: 4900000, guid: 6fa6d60ab293242c3909695b979e9a1e, type: 3}
+  myQuestCompleted: 1
+  myQuestActive: 0
+  questItem: {fileID: 0}
+  npcGivesItem: 0
+  sacrificeItem: {fileID: 0}
+  itemCountNeeded: 0
+  npcName: Maple

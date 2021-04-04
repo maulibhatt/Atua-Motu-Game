@@ -16,4 +16,4 @@ MonoBehaviour:
   itemDescription: This ring seems very magical. Imagine the history it holds.
   itemImage: {fileID: 21300000, guid: 35f65ce1fc5a849b1a4fef7e670def60, type: 3}
   itemCount: 0
-  character: Bones
+  character: 

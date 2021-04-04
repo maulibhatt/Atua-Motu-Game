@@ -44,4 +44,5 @@ public class BeetleMovement : MonoBehaviour
         animator.SetFloat("Horizontal", animatorState.x);
         animator.SetFloat("Vertical", animatorState.y);
     }
+
 }

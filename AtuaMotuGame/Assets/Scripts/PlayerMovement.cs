@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         allowChange = true;
         Time.timeScale = 1f;
+        //this.transform.position = (Vector3) GameState.PlayerPosition;
     }
     // Update is called once per frame
     void Update()

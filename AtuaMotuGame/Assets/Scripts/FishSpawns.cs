@@ -14,7 +14,7 @@ public class FishSpawns : MonoBehaviour
     }
     void Update()
     {
-        if (Time.time - startTime > 4 || first)
+        if (Time.time - startTime > 3 || first)
         {                
             List<int> usedNumbers = new List<int>();
             for (int i = 0; i < 6; i++)

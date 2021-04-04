@@ -22,7 +22,11 @@ public class BreakableTile : MonoBehaviour
         {
             var tilepos = player.transform.position;
             breakableTilemap.SetTile(breakableTilemap.WorldToCell(tilepos), null);
+            breakableTilemap.SetTile(breakableTilemap.WorldToCell(tilepos + Vector3.up), null);
+            breakableTilemap.SetTile(breakableTilemap.WorldToCell(tilepos + 2*Vector3.up), null);
             breakableTilemap.SetTile(breakableTilemap.WorldToCell(tilepos + Vector3.down), null);
+            breakableTilemap.SetTile(breakableTilemap.WorldToCell(tilepos + 2*Vector3.down), null);
+            breakableTilemap.SetTile(breakableTilemap.WorldToCell(tilepos + 3*Vector3.down), null);
         }
     }
 

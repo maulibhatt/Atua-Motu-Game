@@ -48,5 +48,6 @@ public class DialogObject : MonoBehaviour
             i++;
             yield return new WaitForSeconds(delay);
         }
+        myText.text = cName + fullText;
     }
 }
