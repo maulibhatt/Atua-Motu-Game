@@ -2,6 +2,9 @@ VAR accepted_quest = true
 VAR has_items = false
 VAR completed_quest = false
 EXTERNAL giveItems(count)
+
+Frosty: Hey there, Alex. What's up? -> start
+
 == accepted ==
 Frosty: Hey there, Alex. What's up? -> start
 
