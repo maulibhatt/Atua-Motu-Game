@@ -21,7 +21,9 @@ public class Dig : MonoBehaviour
 
     public int currentDigs;
 
-    public GameObject digText; 
+    public GameObject digText;
+
+    public InventoryItem item_to_add;
 
     // Start is called before the first frame update
     void Start()
@@ -43,11 +45,10 @@ public class Dig : MonoBehaviour
             } else if (item.gameObject.name == "Item")
             {
                 Debug.Log("Found");
-                textObj.gameObject.GetComponent<TMP_Text>().text = "Item ____ Found";
+                textObj.gameObject.GetComponent<TMP_Text>().text = "Tablet Found";
                 Destroy(item.gameObject);
-                //add item here;
+                GameState.AddItem(item_to_add);
             }
-
             Instantiate(digPrefab, this.transform.position, digPrefab.transform.rotation);
         }
         updateDigs();
@@ -55,7 +56,7 @@ public class Dig : MonoBehaviour
 
     void updateDigs()
     {
-        digText.gameObject.GetComponent<TMP_Text>().text = "Shovel Durability: " + currentDigs.ToString(); 
+        digText.gameObject.GetComponent<Text>().text = ": " + currentDigs.ToString(); 
     }
 
 }
