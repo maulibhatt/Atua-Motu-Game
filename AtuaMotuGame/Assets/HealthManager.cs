@@ -13,20 +13,21 @@ public class HealthManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     void Awake()
     {
         GameObject UI = GameObject.Find("HealthUI");
+        if
 
         if (Instance == null && UI != null)
-        {
-            DontDestroyOnLoad(gameObject);
-            Instance = this;
-            Instance.currentLives = 3;
-        }
-        else if (Instance != this && UI == null)
+            {
+                DontDestroyOnLoad(gameObject);
+                Instance = this;
+                Instance.currentLives = 3;
+            }
+            else if (Instance != this || UI == null)
         {
             Destroy(gameObject);
         }
