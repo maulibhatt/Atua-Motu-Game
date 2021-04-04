@@ -214,8 +214,16 @@ public static class GameState
                     return false;
                 }
             case "Erised":
-                Debug.Log("Checking Erised's quest for completion");
                 if (SearchItem("Blue Gem") >= 8)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            case "Rocky":
+                if (SearchItem("Rock Climbing Glove") >= 2)
                 {
                     return true;
                 }

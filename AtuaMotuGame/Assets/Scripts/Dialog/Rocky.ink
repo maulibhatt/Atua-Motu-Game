@@ -6,15 +6,15 @@ EXTERNAL giveItems(count)
 Rocky: Hey Alex.
 
 * [Ask what's wrong] You: Rocky, you look a bit glum. Everything okay?
-
-Rocky: No. I left my favourite pair of rock climbing gloves at the top of this cliff. 
-Rocky: I want to get them back, but my other pair just fell apart.
-
-* [Offer to help] You: I can get them for you!
-    Rocky: That would be great! I feel so much better already!
-    -> accepted
-* [Leave] You: Sorry to hear that, Rocky. I'm a bit busy now, but I'll try to help you later. 
-    -> declined
+    Rocky: No. I left my favourite pair of rock climbing gloves at the top of this cliff. 
+    Rocky: I want to get them back, but my other pair just fell apart.
+    ** [Offer to help] You: I can get them for you!
+        Rocky: That would be great! I feel so much better already!
+        -> accepted
+    ** [Leave] You: Sorry to hear that, Rocky. I'm a bit busy now, but I'll try to help you later. 
+        -> declined
+        
+* [Leave] You: Hey Rocky. Gotta go. ->END
 
 == accepted ==
 ~ accepted_quest = true
