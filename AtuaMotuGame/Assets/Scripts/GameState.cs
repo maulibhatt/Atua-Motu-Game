@@ -27,8 +27,8 @@ public static class GameState
         },
         {"Forest", new Dictionary<string, Vector3>(){
                 {"Town",  new Vector3(29.3f, -1.66f, 0f) },
-                { "Volcano", new Vector3(25.55f, -12.98f, 0f) },
-                { "Rock_Climbn", new Vector3(-15.8f, -5.8f, 0f) },
+                { "Volcano", new Vector3(25.48f, -11.8f, 0f) },
+                { "RockCave", new Vector3(-15.8f, -5.8f, 0f) },
                 { "IceCave", new Vector3(-15.8f, 5.57f, 0f) }
                 }
         },
@@ -38,16 +38,16 @@ public static class GameState
                 }
         },
         {"Volcano", new Dictionary<string, Vector3>(){
-                {"Town",  new Vector3(16.46f, 0.09f, 0f) },
+                {"Town",  new Vector3(3.3f, 22.22f, 0f) },
                 { "Forest", new Vector3(-8.85f, 22.45f, 0f) },
-                { "Beach", new Vector3(-15.78f, -12.77f, 0f) },
+                { "Beach", new Vector3(12.99f, 20.78f, 0f) },
                 }
         },
         {"Town", new Dictionary<string, Vector3>(){
-                {"Desert",  new Vector3(-17.54f, 22.78f, 0f) },
+                {"DiggingInTheDesert",  new Vector3(-17.54f, 22.78f, 0f) },
                 { "Forest", new Vector3(-20.2f, -7.3f, 0f) },
-                { "Beach", new Vector3(1.31f, 6.38f, 0f) },
-                { "Volcano", new Vector3(1.31f, 6.38f, 0f) },
+                { "Beach", new Vector3(45.5f, 17.58f, 0f) },
+                { "Volcano", new Vector3(36.7f, -14.7f, 0f) },
 
             }
         },
