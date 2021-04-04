@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class BossChoiceObject : MonoBehaviour
 {
-     [SerializeField] private Text myText;
+    [SerializeField] private Text myText;
     private int choiceValue;
 
     public void Setup(string newDialog, int myChoice)
