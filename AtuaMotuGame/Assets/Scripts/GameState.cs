@@ -11,6 +11,62 @@ public static class GameState
     static List<bool> apples = new List<bool>(new bool[6]);
     static bool isFollowedByBirch = false;
     static bool lockBirchMovement = false;
+    static string lastSceneLocation = "";
+
+    static Dictionary<string, Dictionary<string, Vector3>> spawnLocations = new Dictionary<string, Dictionary<string, Vector3>>(){
+        {"DiggingInTheDesert", new Dictionary<string, Vector3>(){
+                {"Town",  new Vector3(13.68f, 7.97f, 0f) },
+                { "Beach", new Vector3(24.42f, 7.97f, 0f) }
+                }
+        },
+        {"Beach", new Dictionary<string, Vector3>(){
+                {"DiggingInTheDesert",  new Vector3(-15.98f, 16.1f, 0f) },
+                { "Town", new Vector3(-17.08f, 4.41f, 0f) },
+                { "Volcano", new Vector3(-17.08f, -5.89f, 0f) }
+                }
+        },
+        {"Forest", new Dictionary<string, Vector3>(){
+                {"Town",  new Vector3(29.3f, -1.66f, 0f) },
+                { "Volcano", new Vector3(25.55f, -12.98f, 0f) },
+                { "Rock_Climbn", new Vector3(-15.8f, -5.8f, 0f) },
+                { "IceCave", new Vector3(-15.8f, 5.57f, 0f) }
+                }
+        },
+        {"RockCave", new Dictionary<string, Vector3>(){
+                {"Rock_Climbn",  new Vector3(16.46f, 0.09f, 0f) },
+                { "Forest", new Vector3(16.46f, -5.65f, 0f) }
+                }
+        },
+        {"Volcano", new Dictionary<string, Vector3>(){
+                {"Town",  new Vector3(16.46f, 0.09f, 0f) },
+                { "Forest", new Vector3(-8.85f, 22.45f, 0f) },
+                { "Beach", new Vector3(-15.78f, -12.77f, 0f) },
+                }
+        },
+        {"Town", new Dictionary<string, Vector3>(){
+                {"Desert",  new Vector3(-17.54f, 22.78f, 0f) },
+                { "Forest", new Vector3(-20.2f, -7.3f, 0f) },
+                { "Beach", new Vector3(1.31f, 6.38f, 0f) },
+                { "Volcano", new Vector3(1.31f, 6.38f, 0f) },
+
+            }
+        },
+
+    };
+    public static void SetLastSceneLocation(string last)
+    {
+        lastSceneLocation = last;
+    }
+    public static Vector3 SpawnPosition(string currentScene)
+    {
+        if (lastSceneLocation == "" || currentScene == "Rock_Climbn" || currentScene == "IceCave") {
+            return new Vector3(-1,-1,-1);
+        }
+    else
+        {
+        return spawnLocations[currentScene][lastSceneLocation];
+        }
+    }
 
     public static Vector2 PlayerPosition
     {
@@ -223,24 +279,6 @@ public static class GameState
                     return false;
                 }
             case "Rocky":
-                if (SearchItem("Rock Climbing Glove") >= 2)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            case "Frosty":
-                if (SearchItem("Rock Climbing Glove") >= 2)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            case "Snowy":
                 if (SearchItem("Rock Climbing Glove") >= 2)
                 {
                     return true;
