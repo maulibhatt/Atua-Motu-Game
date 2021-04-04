@@ -231,6 +231,24 @@ public static class GameState
                 {
                     return false;
                 }
+            case "Frosty":
+                if (SearchItem("Rock Climbing Glove") >= 2)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            case "Snowy":
+                if (SearchItem("Rock Climbing Glove") >= 2)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             default:
                 return false;
 
