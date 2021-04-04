@@ -2,7 +2,6 @@ VAR accepted_quest = false
 VAR has_items = true
 VAR completed_quest = true
 EXTERNAL giveItems(count)
-
 == after_quest == 
 Snowy: Hey buddy! Good of you to come all this way to visit me. -> info
 
