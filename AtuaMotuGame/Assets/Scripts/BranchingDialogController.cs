@@ -41,6 +41,7 @@ public class BranchingDialogController : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("Player");
+
     }
 
     // Update is called once per frame
@@ -358,6 +359,21 @@ public class BranchingDialogController : MonoBehaviour
                     GameState.RemoveItem(myQuest.questItem, num);
                 });
                 break;
+
+            case "Snowy":
+                myQuest.myStory.BindExternalFunction("giveItems", (int num) =>
+                {
+                    Debug.Log("Snowy's bound function");
+                });
+                break;
+
+            case "Frosty":
+                myQuest.myStory.BindExternalFunction("giveItems", (int num) =>
+                {
+                    Debug.Log("Frosty's bound function");
+                });
+                break;
+
             default:
                 myQuest.myStory.BindExternalFunction("giveItems", (int num) =>
                 {

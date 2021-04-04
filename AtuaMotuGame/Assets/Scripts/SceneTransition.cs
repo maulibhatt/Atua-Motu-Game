@@ -12,6 +12,7 @@ public class SceneTransition : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            GameState.SetLastSceneLocation(SceneManager.GetActiveScene().name);
             GameState.PlayerPosition = position;
             SceneManager.LoadScene(scene);
         }
