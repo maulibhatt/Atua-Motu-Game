@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cdc4217c203be4b5aa31b2084a5dbcbe, type: 3}
-  m_Name: Fishing Glove
+  m_Name: Climbing Glove
   m_EditorClassIdentifier: 
   itemName: Rock Climbing Glove
   itemDescription: 
