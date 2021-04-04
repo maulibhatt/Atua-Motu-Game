@@ -1,5 +1,5 @@
 VAR accepted_quest = false
-VAR has_items = true
+VAR has_items = false
 VAR completed_quest = false
 EXTERNAL giveItems(count)
 
@@ -37,6 +37,10 @@ Ms. Pie: Can you find me 6 apples? I'm going to make some custard in the meantim
 Ms. Pie: Alright, come back when you can! -> endpart
 
 == after_quest ==
+~ completed_quest = true
+~ has_items = false
+~ accepted_quest = false
+
 Ms. Pie: These will make perfect tarts. Thanks for getting me those apples. -> info
 
 == info ==
@@ -46,8 +50,7 @@ Ms. Pie: These will make perfect tarts. Thanks for getting me those apples. -> i
     Ms. Pie: I will tell you this - be careful about who you trust. Not everyone is what they seem.
     Ms. Pie: You may meet someone named Erised, who definitely can't be trusted.
     Ms. Pie: Some folks are trying to guide you towards destruction, and you will need to ...
-    Ms. Pie: ... make some very difficult but important decisions.
-    -> info
+    Ms. Pie: ... make some very difficult but important decisions. -> info
 
 + [Leave] You: I'll talk to you later! Goodbye. -> END
 

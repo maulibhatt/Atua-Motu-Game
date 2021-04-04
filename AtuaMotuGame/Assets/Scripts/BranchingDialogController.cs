@@ -4,6 +4,7 @@ using UnityEngine;
 using Ink.Runtime;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 public class BranchingDialogController : MonoBehaviour
 {
@@ -121,6 +122,9 @@ public class BranchingDialogController : MonoBehaviour
                 Debug.Log("has_items has been marked true");
                 myQuest.myStory.variablesState["has_items"] = true;
             }
+            else {
+                myQuest.myStory.variablesState["has_items"] = false;
+            }
 
             // If this NPC's quest is active, start at the quest instruction
             if (GameState.CheckActive(myQuest))
@@ -195,7 +199,6 @@ public class BranchingDialogController : MonoBehaviour
 
             // Update the quest object to reflect completion
             GameState.SetQuestStatus(myQuest, true);
-
 
         }
 
@@ -281,7 +284,6 @@ public class BranchingDialogController : MonoBehaviour
         Button choiceButton = newChoiceObject.gameObject.GetComponent<Button>();
         if (choiceButton)
         {
-            Debug.Log("Adding Choices");
             // Adds the choice value to the listener that is in the onclick part of the button.
             choiceButton.onClick.AddListener(delegate { ChooseChoice(choiceValue); });
         }
@@ -338,6 +340,19 @@ public class BranchingDialogController : MonoBehaviour
                     GameState.RemoveItem(myQuest.questItem, num);
                 });
                 break;
+            case "Bones":
+                myQuest.myStory.BindExternalFunction("giveItems", (int num) =>
+                {
+                    GameState.RemoveItem(myQuest.questItem, num);
+                });
+                break;
+            case "Erised":
+                myQuest.myStory.BindExternalFunction("giveItems", (int num) =>
+                {
+                    GameState.RemoveItem(myQuest.questItem, num);
+                });
+                break;
+
             default:
                 myQuest.myStory.BindExternalFunction("giveItems", (int num) =>
                 {

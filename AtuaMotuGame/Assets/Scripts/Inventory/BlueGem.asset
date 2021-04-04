@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cdc4217c203be4b5aa31b2084a5dbcbe, type: 3}
-  m_Name: Key
+  m_Name: BlueGem
   m_EditorClassIdentifier: 
-  itemName: Golden Key
-  itemDescription: I wonder what door this key leads to
-  itemImage: {fileID: 21300000, guid: 531320e1661f04428a093707ef0ae0ab, type: 3}
-  itemCount: 1
-  character: 
+  itemName: Blue Gem
+  itemDescription: 
+  itemImage: {fileID: 21300000, guid: af65ae5bcef4a4f64b9e74b13718532f, type: 3}
+  itemCount: 0
+  character: Erised

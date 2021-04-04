@@ -8,6 +8,7 @@ TagManager:
   - Bully
   - Breakable
   - BoulderStop
+  - Beetle
   layers:
   - Default
   - TransparentFX
@@ -50,6 +51,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 3154763943
+    locked: 0
+  - name: Breakable
+    uniqueID: 3762083461
     locked: 0
   - name: PopUp
     uniqueID: 974191097

@@ -113,10 +113,12 @@ public static class GameState
                 {
                     questList[i].Complete = true;
                     questList[i].Active = false;
+                    Debug.Log(quest.npcName + " quest complete.");
                 }
                 else
                 {
                     questList[i].Active = true;
+                    Debug.Log(quest.npcName + " quest active.");
                 }
                 
                 break;
@@ -188,10 +190,27 @@ public static class GameState
                     return false;
                 }
             case "Igneous":
-                Debug.Log("Here2");
                 if (SearchItem("Bone Necklace") >= 3)
                 {
-                    Debug.Log("Here");
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            case "Bones":
+                if (SearchItem("Tablet") >= 1)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            case "Erised":
+                Debug.Log("Checking Erised's quest for completion");
+                if (SearchItem("Blue Gem") >= 8)
+                {
                     return true;
                 }
                 else
