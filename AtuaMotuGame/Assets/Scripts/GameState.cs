@@ -8,6 +8,7 @@ public static class GameState
     static Vector2 playerPosition;
     static List<InvItem> inventory = new List<InvItem>();
     static List<GameQuest> questList = new List<GameQuest>();
+    static List<bool> apples = new List<bool>(new bool[6]);
     static bool isFollowedByBirch = false;
     static bool lockBirchMovement = false;
 
@@ -38,6 +39,11 @@ public static class GameState
         set { lockBirchMovement = value;}
     }
 
+    public static List<bool> Apples
+    {
+        get { return apples; }
+        set { apples = value; }
+    }
     public static int SearchItem(string item) 
     {
         for (int i = 0; i < inventory.Count; ++i)
