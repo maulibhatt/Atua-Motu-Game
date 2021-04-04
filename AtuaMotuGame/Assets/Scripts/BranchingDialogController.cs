@@ -352,7 +352,12 @@ public class BranchingDialogController : MonoBehaviour
                     GameState.RemoveItem(myQuest.questItem, num);
                 });
                 break;
-
+            case "Rocky":
+                myQuest.myStory.BindExternalFunction("giveItems", (int num) =>
+                {
+                    GameState.RemoveItem(myQuest.questItem, num);
+                });
+                break;
             default:
                 myQuest.myStory.BindExternalFunction("giveItems", (int num) =>
                 {
