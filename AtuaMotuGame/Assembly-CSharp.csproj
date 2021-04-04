@@ -38,6 +38,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\TextAssetValue.cs" />
      <Compile Include="Assets\Scripts\SignalListener.cs" />
+     <Compile Include="Assets\Scripts\OchanosTemple.cs" />
      <Compile Include="Assets\Scripts\TileMapTrigger.cs" />
      <Compile Include="Assets\DigUI.cs" />
      <Compile Include="Assets\Scripts\SignalSender.cs" />
@@ -75,7 +76,7 @@
      <Compile Include="Assets\Ice.cs" />
      <Compile Include="Assets\Scripts\NPCMovement.cs" />
      <Compile Include="Assets\Scripts\InitGame.cs" />
-     <Compile Include="Assets\Scripts\FinalBossTrigger.cs" />
+     <Compile Include="Assets\Scripts\OldScripts\FinalBossTrigger.cs" />
      <Compile Include="Assets\BreakableTile.cs" />
      <Compile Include="Assets\Scripts\ArenaBattle.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
@@ -86,7 +87,9 @@
      <Compile Include="Assets\LedgeCollision.cs" />
      <Compile Include="Assets\Scripts\Inventory\PhysicalInventoryItem.cs" />
      <Compile Include="Assets\Scripts\Inventory\InventoryManager.cs" />
-     <Compile Include="Assets\Scripts\OchanosTemple.cs" />
+     <Compile Include="Assets\Scripts\FinalBossDialog.cs" />
+     <Compile Include="Assets\BossChoiceObject.cs" />
+     <Compile Include="Assets\BossDialogObject.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

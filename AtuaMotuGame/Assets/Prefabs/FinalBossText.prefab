@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5702153678965322448}
   - component: {fileID: 4317734532555624109}
   - component: {fileID: 640624578972335063}
+  - component: {fileID: 416864908827407648}
   m_Layer: 0
   m_Name: FinalBossText
   m_TagString: Untagged
@@ -79,3 +80,16 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: New Text
+--- !u!114 &416864908827407648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7211068082577389686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3151f3dc4dfa84f4cb6fe66f1d001d5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myText: {fileID: 640624578972335063}
