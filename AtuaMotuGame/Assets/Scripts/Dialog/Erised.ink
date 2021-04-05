@@ -6,7 +6,7 @@ EXTERNAL giveItems(count)
 Erised: Hey there, Alex.
 
 * [You look tired] You: You look tired, Erised. Are you alright?
-    Erised: I am tired. I've been looking for the perfect metal to break through these violet stones.
+    Erised: I am tired. I've been trying to break through these violet stones all day.
     Erised: Would you like to help me out?
         ** [Yes] You: Sure! What would you like me to do?
             -> accepted
@@ -34,7 +34,9 @@ Erised: I need you to find me 8 blue gems. -> questions
     Erised: You can slash at the violet stones with your sword to break through them. 
     Erised: Some of the violet stones will have blue gems behind them.
     Erised: Be careful, though. I expect this is a fairly tiring job. 
-    Erised: After you dig through 15 violet stones, I want you to take some rest and come back tomorrow. -> questions
+    Erised: After you dig through 15 violet stones, I want you to take some rest and come back tomorrow. 
+    Erised: These stones will grow back by then, but the gems inside them will not.
+    Erised: So if you leave, make sure you remember where you've already dug. -> questions
 
 * [Why blue gems] You: Why do you need blue gems?
     Erised: I find that the worst things around this island are blue.
@@ -51,14 +53,16 @@ Erised: Alright. See you around, Alex. -> endpart
 ~ completed_quest = true
 ~ has_items = false
 ~ accepted_quest = false
-
 Erised: These gems will make wonderful jewelery for the island! -> info
 
 == info ==
 
 * [Ask for advice] You: Do you have any advice for me?
     Erised: You mean for your meeting with Ochano? 
-    Erised: The best advice I can give is INSERT RIDDLE ANSWER. -> info
+    Erised: Ochano will likely ask you a riddle during your confrontation. 
+    Erised: It will be tricky, but I want you to remember that your answer might change your fate.
+    Erised: Ochano is the great fire spirit, and as we have seen on this island, fire can be most destructive.
+    Erised: It has no weapons, yet it brings death and doom. -> info
 
 + [Leave] You: Alright, see you later! -> END
 

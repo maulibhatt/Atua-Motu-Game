@@ -24,7 +24,7 @@ Mantis: You need to kill these blue Bunny Beetles and retrieve the carrots they'
 
 * [How?] You: How do I kill them?
     Mantis: You can attack them with your sword to kill them. 
-    Mantis: Be careful though! They are quite fast, and protective of their carrots. -> questions
+    Mantis: Be careful though! They are quite fast and very protective of their carrots. -> questions
 
 + [Leave] You: Okay, I'll do my best. -> END
 

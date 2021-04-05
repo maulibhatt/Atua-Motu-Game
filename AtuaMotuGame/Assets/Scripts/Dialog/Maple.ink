@@ -14,15 +14,14 @@ Maple: Oh thank goodness you're here! Can you help me find my sister?
 == accepted ==
 ~ accepted_quest = true
 { has_items == true:
-    Maple: Oh there you are Birch! Thank goodness you're okay. I was so worried. Stay here, okay?
+    Maple: Oh there you are Birch! Thank goodness you're okay. I was so worried. Go straight home, okay?
     ~ giveItems(1) 
     -> after_quest 
     }
 Maple: My little sister, Birch, wandered into the forest, and I think she's lost. 
-Maple: I don't think she will be able to get out by herself. Even I have trouble finding my way around this maze of trees!
-
-Maple: When you find her, let her know I sent you and she will follow you out.
-
+Maple: I don't think she will be able to get out by herself. 
+Maple: Even I have trouble finding my way around this maze of trees!
+Maple: When you find her, just approach her and she will follow you out.
 Maple: The forest opens up at different points on this path where you can come out and find your way to me. 
 
 ->endpart
@@ -39,7 +38,7 @@ Maple: Thank you for finding my sister! Please let me know if I can do anything 
 == info ==
 
 * [Ask for Advice] You: Can you give me some advice?
-    Maple: Absolutely. After you finish 3 quests, you will be able to meet Ochano. You should approach him with confidence. He will respect you for it. -> info
+    Maple: Absolutely. On day 4, you will be able to meet Ochano. You should approach him with confidence. He will respect you for it. -> info
 
 + [Leave] You: Okay, I have to go now. -> END
 

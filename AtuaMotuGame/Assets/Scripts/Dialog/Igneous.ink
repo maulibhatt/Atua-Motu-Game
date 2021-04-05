@@ -5,15 +5,15 @@ EXTERNAL giveItems(count)
 
 Igneous: Alex! Thank goodness you're here! I need your help ASAP!
 
-* [Yes] You: Is everything okay? What do you need?
+* [What do you need] You: Is everything okay? What do you need?
     -> accepted
-* [No] You: Not right now.
+* [Later] You: Maybe I can help you later.
     -> declined
     
 == accepted ==
 ~ accepted_quest = true
 
-Igneous: I need you to bring me the bone necklaces! -> questions
+Igneous: I need you to bring me all 3 bone necklaces! -> questions
 Igneous: I fear that this volcano will fall apart if we don't do something soon.
 
 == questions ==
@@ -37,10 +37,10 @@ Igneous: I fear that this volcano will fall apart if we don't do something soon.
     Igneous: That should be enough to reverse the portal and teleport you and the necklace back.
     Igneous: Sadly, it'll destroy the portal in the process, but it's a risk we need to take.
     Igneous: Be sure to push them with your sword! They are too hot for you to touch.
-    Igneous: I'll be watching you from this platform. If you do fall off, don't worry. 
-    Igneous: I'll bring you back to the portal before you touch the lava, and you can try again. ->questions
+    Igneous: I've given you some fire protection, but it will only let you fall in the lava 3 times.
+    Igneous: If you fall three times, come back tomorrow. I'll have another fire protection potion ready. ->questions
 
-+ [Leave] You: Okay. Keep me safe! -> END
++ [Leave] You: Okay. Here I go! -> END
 
 == declined == 
 Igneous: Okay, come back as soon as you can! I really need your help. -> endpart
@@ -57,11 +57,12 @@ Igneous: Thank you for getting back my bone necklaces! -> info
 * [Ask for advice] You: Do you have any advice for me?
     Igneous: Good question. I want you to think about the task you helped me with today.
     Igneous: My advice is this - ice weakens fire. Be sure to keep that in mind.
-    Igneous: Given that Ochano is the great fire spirit, I'm sure this advice will come in handy. -> info
+    Igneous: Given that Ochano is the great fire spirit, I'm sure this advice will come in handy. 
+    Igneous: If Ochano's fire is directed into ice, he will be weakened! -> info
 
 * [Bone Necklaces] You: What do you plan to do with them now?
-    Igneous: I think I will try to make portals again.
-    Igneous: I want to eventually extend them to beyond this island.
+    Igneous: I will try to make these portals again, but correctly this time.
+    Igneous: Eventually, I want to extend them to beyond this island.
     Igneous: Hopefully one day, I can help my friends escape. -> info
 
 + [Leave] You: Okay, bye for now. -> END
