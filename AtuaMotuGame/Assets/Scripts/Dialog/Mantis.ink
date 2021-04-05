@@ -13,7 +13,7 @@ Mantis: Alex!! I need you to do some pest control for me. Are you free?
 == accepted ==
 ~ accepted_quest = true
 
-Mantis: You need to kill these blue Bunny Beetles and retrieve the carrots they've stolen. -> questions
+Mantis: You need to kill these blue Bunny Beetles and retrieve the 12 carrots they've stolen. -> questions
 
 == questions ==
 
@@ -24,7 +24,8 @@ Mantis: You need to kill these blue Bunny Beetles and retrieve the carrots they'
 
 * [How?] You: How do I kill them?
     Mantis: You can attack them with your sword to kill them. 
-    Mantis: Be careful though! They are quite fast and very protective of their carrots. -> questions
+    Mantis: Be careful though! They are quite fast and very protective of their carrots.
+    Mantis: Each beetle has 1 carrot. -> questions
 
 + [Leave] You: Okay, I'll do my best. -> END
 

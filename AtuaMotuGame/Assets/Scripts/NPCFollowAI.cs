@@ -7,6 +7,7 @@ public class NPCFollowAI : MonoBehaviour
 {
 
     [SerializeField] Transform target;
+    [SerializeField] PlayerMovement pm;
     public bool currentlyFollowing;
     [SerializeField] private Animator myAnimation;
     [SerializeField] private GameObject theBDC;
@@ -21,6 +22,7 @@ public class NPCFollowAI : MonoBehaviour
 		agent.updateRotation = false;
 		agent.updateUpAxis = false;
         currentlyFollowing = false;
+        pm = target.GetComponent<PlayerMovement>();
         myAnimation.SetFloat("Speed", 0);
         if (GameState.LockBirchMovement)
         {
@@ -34,6 +36,7 @@ public class NPCFollowAI : MonoBehaviour
         if (!GameState.LockBirchMovement && currentlyFollowing)
         {
             agent.SetDestination(target.position);
+            agent.speed = pm.moveSpeed;
             UpdateAnimation();
         }
     }
