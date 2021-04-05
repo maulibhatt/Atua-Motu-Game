@@ -18,3 +18,4 @@ MonoBehaviour:
   sacrificeItem: {fileID: 0}
   itemCountNeeded: 1
   npcName: Bones
+  QuestDescription: Help Bones find the tablet in the Desert

@@ -18,3 +18,4 @@ MonoBehaviour:
   sacrificeItem: {fileID: 0}
   itemCountNeeded: 8
   npcName: Erised
+  QuestDescription: Mine 8  Blue Gems for Erised in the Rock Cave

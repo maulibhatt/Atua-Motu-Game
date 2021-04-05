@@ -8,7 +8,7 @@ public static class GameState
 {
     static Vector2 playerPosition;
     static List<InvItem> inventory = new List<InvItem>();
-    static List<GameQuest> questList = new List<GameQuest>();
+    public static List<GameQuest> questList = new List<GameQuest>();
     static List<bool> apples = new List<bool>(new bool[6]);
     static List<bool> gems = new List<bool>(new bool[28]);
     static bool isFollowedByBirch = false;

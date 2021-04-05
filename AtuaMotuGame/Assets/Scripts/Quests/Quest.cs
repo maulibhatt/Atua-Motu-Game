@@ -17,5 +17,6 @@ public class Quest : ScriptableObject
     public InventoryItem sacrificeItem;
     public int itemCountNeeded;
     public string npcName;
+    public string QuestDescription;
 
 }

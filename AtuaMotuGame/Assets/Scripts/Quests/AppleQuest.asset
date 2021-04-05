@@ -18,3 +18,4 @@ MonoBehaviour:
   sacrificeItem: {fileID: 0}
   itemCountNeeded: 6
   npcName: MsPie
+  QuestDescription: Find apples for MsPie in Town
