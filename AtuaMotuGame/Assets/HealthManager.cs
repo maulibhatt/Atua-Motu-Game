@@ -53,7 +53,7 @@ public class HealthManager : MonoBehaviour
     {
         return Instance.currentLives;
     }
-    void displayLives()
+    public void displayLives()
     {
         int i = Instance.currentLives;
         while (i < 3)

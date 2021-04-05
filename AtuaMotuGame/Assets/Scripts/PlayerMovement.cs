@@ -93,7 +93,7 @@ public class PlayerMovement : MonoBehaviour
                 rb.MovePosition(rb.position + lastMovement * moveSpeed * Time.fixedDeltaTime);
             }
             else
-            {   if (Input.GetKey(KeyCode.LeftShift))
+            {   if (Input.GetKey(KeyCode.LeftShift) && !GameState.CheckActiveString("Rocky"))
                 {
                     rb.MovePosition(rb.position + movement * 10f * Time.fixedDeltaTime);
                 }
