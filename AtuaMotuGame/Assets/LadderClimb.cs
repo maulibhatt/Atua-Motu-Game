@@ -9,6 +9,10 @@ public class LadderClimb : Interactable
     public GameObject player;
     public Vector3 a;
 
+    public bool entrance;
+    public GameObject TileMapFloor;
+    public GameObject TileMapEntrance;
+
     void Start()
     {
 
@@ -17,10 +21,14 @@ public class LadderClimb : Interactable
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && playerInRange)
+        if (GameState.LadderEnabled && Input.GetKeyDown(KeyCode.Space) && playerInRange)
         {
+            if (entrance && !TileMapEntrance.activeSelf)
+            {
+                TileMapFloor.SetActive(false);
+                TileMapEntrance.SetActive(true);
+            }
             // Check if the dialogbox is already active, then de-activate
-
             player.transform.position = a;
         }
     }
@@ -30,9 +38,13 @@ public class LadderClimb : Interactable
         if (other.CompareTag("Player") && !other.isTrigger)
         {
             clue.Raise();
-            //clueOn.Raise();
             playerInRange = false;
         }
+    }
+
+    private void ShowEntrance()
+    {
+
     }
 
 

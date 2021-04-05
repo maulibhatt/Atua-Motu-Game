@@ -2,7 +2,8 @@ VAR accepted_quest = false
 VAR has_items = true
 VAR completed_quest = false
 EXTERNAL giveItems(count)
-Snowy: Hey buddy! Good of you to come all this way to visit me. -> info1
+Snowy: Hey buddy! Good of you to come all this way to visit me. 
+-> info1
 
 == after_quest == 
 Snowy: Hey buddy! Good of you to come all this way to visit me. -> info
@@ -10,7 +11,7 @@ Snowy: Hey buddy! Good of you to come all this way to visit me. -> info
 == info1 ==
 ~ completed_quest = true
 ~ giveItems(1) 
--> info
+Snowy: Hopefully the ice wasn't too harsh! -> info
 
 == info ==
 * [Ask about Ochano] You: I want to learn more about Ochano and how to defeat him.

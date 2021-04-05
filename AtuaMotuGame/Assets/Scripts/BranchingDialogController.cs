@@ -363,7 +363,8 @@ public class BranchingDialogController : MonoBehaviour
             case "Snowy":
                 myQuest.myStory.BindExternalFunction("giveItems", (int num) =>
                 {
-                    Debug.Log("Snowy's bound function");
+                    Debug.Log("Snowy's ladder is enabled.");
+                    GameState.LadderEnabled = true;
                 });
                 break;
 
