@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RedGem
   m_EditorClassIdentifier: 
   itemName: Red Gem
-  itemDescription: What a lovely looking red gem!
+  itemDescription: Imagine if this red gem was a ruby! I wonder how much it's worth...
   itemImage: {fileID: 21300000, guid: 1198a5af6f3b0446d9a005c1108832dc, type: 3}
   itemCount: 0
   character: 

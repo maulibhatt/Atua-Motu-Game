@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: BlueFish
   m_EditorClassIdentifier: 
   itemName: Blue Fish
-  itemDescription: 
+  itemDescription: These fish are such a brilliant blue.
   itemImage: {fileID: -1915776564401465818, guid: 4b4c12fc61edd8a438d66515f013544d,
     type: 3}
   itemCount: 1
-  character: 
+  character: Trout

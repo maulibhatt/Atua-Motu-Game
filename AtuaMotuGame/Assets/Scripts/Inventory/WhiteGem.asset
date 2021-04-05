@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: WhiteGem
   m_EditorClassIdentifier: 
   itemName: White Gem
-  itemDescription: Brilliant white gem that shines very brightly.
+  itemDescription: Could this white gem be a diamond? If it is, it might be very
+    useful.
   itemImage: {fileID: 21300000, guid: 9708e0a65226b4d3c8fa87ebd887d59d, type: 3}
   itemCount: 0
   character: 

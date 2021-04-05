@@ -16,4 +16,4 @@ MonoBehaviour:
   itemDescription: What a delicious snack! Better save it for later though...
   itemImage: {fileID: 21300000, guid: 740f4bba4725444a3a14702bcbefebb5, type: 3}
   itemCount: 0
-  character: Birch
+  character: MsPie

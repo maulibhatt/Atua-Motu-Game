@@ -20,10 +20,9 @@ public class OchanosTemple : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerInRange && Input.GetKeyDown(KeyCode.Return))
+        if (playerInRange && Input.GetKeyDown(KeyCode.Space))
         {
             // activate temple
-            Debug.Log("Temple Canvas activate!");
             BossDialogController.EnableBossCanvas();
             player.GetComponent<PlayerMovement>().EnablePlayerMovement();
             playerInRange = false;

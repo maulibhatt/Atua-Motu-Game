@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GreenGem
   m_EditorClassIdentifier: 
   itemName: Green Gem
-  itemDescription: 
+  itemDescription: I wonder if green gem is an emerald.
   itemImage: {fileID: 21300000, guid: 2f631d9ad76a343e4b619b071afb2d33, type: 3}
   itemCount: 0
   character: 

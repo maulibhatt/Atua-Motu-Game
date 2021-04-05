@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Necklace
   m_EditorClassIdentifier: 
   itemName: Bone Necklace
-  itemDescription: 
+  itemDescription: These bone necklaces are probably very valuable to Igneous. I
+    can almost feel their magic.
   itemImage: {fileID: 21300000, guid: 4623c96f5d58448eba3748bd27e7425a, type: 3}
   itemCount: 0
   character: Igneous

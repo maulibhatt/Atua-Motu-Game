@@ -134,18 +134,18 @@ Ochano: "IF YOU WITHDRAW YOUR REQUEST, I WILL SET YOU FREE."
         }
     -> END
     
-* {free == "both"} [Release all spirits] You: I want you to release all of the spirits on the island.
+* {free == "both"} [Release all spirits] You: "I want you to release all of the spirits on the island."
     Ochano: "VERY WELL. IT IS DONE."
     Ochano traps you on the island forever, but he frees all spirits into the world. 
     His evil spirit followers wreak havoc, but the trapped humans spirits are finally free. -> END
     
-* {free == "good"} [Resurrect the Guardian] You: I want you to resurrect the old Guardian.
+* {free == "good"} [Resurrect the Guardian] You: "I want you to resurrect the old Guardian."
     OCHANO: "VERY WELL. IT IS DONE."
     Ochano resurrects the old Guardian of Atua Motu. 
     They battle, and Ochano is banished from the island along with his evil followers. 
     The trapped human spirits are set free, and Atua Motu is protected once more. -> END
     
-* [Escape Atua Motu] You: I want to escape Atua Motu.
+* [Escape Atua Motu] You: "I want to escape Atua Motu."
     Ochano: "VERY WELL. IT IS DONE."
     Ochano frees you from Atua Motu but keeps all of the other spirits trapped and under his rule. -> END
     
@@ -153,7 +153,7 @@ Ochano: "IF YOU WITHDRAW YOUR REQUEST, I WILL SET YOU FREE."
 Ochano: "I WILL FULFILL YOUR DEMANDS IF YOU OFFER YOURSELF AS SACRIFICE."
 Ochano: "IF YOU DON'T, I WILL TAKE EVERY SPIRIT ON ATUA MOTU AS SACRIFICE INSTEAD."
 
-* [Sacrifice yourself] You: I will sacrifice myself.
+* [Sacrifice yourself] You: "I will sacrifice myself."
     {free == "bad" and strength < 5:
     Ochano kills you and frees his evil followers into the world where they can wreak havoc. 
     On the bright side, the trapped human spirits can enjoy the paradise that Ochano melted with his fire.
@@ -185,7 +185,7 @@ Ochano: "IF YOU DON'T, I WILL TAKE EVERY SPIRIT ON ATUA MOTU AS SACRIFICE INSTEA
     -> END
     
 
-* [Sacrifice the spirits] You: Take the spirits, but please spare me!
+* [Sacrifice the spirits] You: "Take the spirits, but please spare me!"
     Ochano: "YOU ARE A COWARD. I WILL NOT KILL YOU, BUT YOU WILL NEVER LEAVE ATUA MOTU."
     Ochano destroys all of the spirits on the island except for you. You wander the barren land with no one but Ochano for company until the end of time.
 

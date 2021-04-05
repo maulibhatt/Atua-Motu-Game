@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: YellowFish
   m_EditorClassIdentifier: 
   itemName: Yellow Fish
-  itemDescription: 
+  itemDescription: These yellow fish are so beautiful. Warm like the sun!
   itemImage: {fileID: -3878289797822314810, guid: 4b4c12fc61edd8a438d66515f013544d,
     type: 3}
   itemCount: 1

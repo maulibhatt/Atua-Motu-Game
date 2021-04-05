@@ -8,7 +8,7 @@ public class FinalBossDialog : MonoBehaviour
 {
     [SerializeField] private TextAsset bossConvo;
     [SerializeField] private Story myStory;
-    [SerializeField] private bool enableSpacebar;
+    [SerializeField] private bool enableEnterKey;
     
     [Header("UI Variables")]
     [SerializeField] private GameObject finalBossCanvas;
@@ -25,13 +25,13 @@ public class FinalBossDialog : MonoBehaviour
     void Start()
     {
         newGameButton.SetActive(false);
-        enableSpacebar = false;
+        enableEnterKey = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (enableSpacebar && Input.GetKeyDown(KeyCode.Space))
+        if (enableEnterKey && Input.GetKeyDown(KeyCode.Return))
         {
             RefreshView();
         }
@@ -63,14 +63,14 @@ public class FinalBossDialog : MonoBehaviour
         if (myStory.canContinue)
         {
             spaceText.SetActive(true);
-            enableSpacebar = true;
+            enableEnterKey = true;
             // If it can, then show the next line as a mew dialog
             MakeNewDialog(myStory.Continue());
         }
         else
         {
             spaceText.SetActive(false);
-            enableSpacebar = false;
+            enableEnterKey = false;
             if (myStory.currentChoices.Count > 0)
             {
                 MakeNewChoices();

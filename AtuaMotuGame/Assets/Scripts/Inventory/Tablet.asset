@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Tablet
   m_EditorClassIdentifier: 
   itemName: Tablet
-  itemDescription: 
+  itemDescription: What a dusty, stone tablet. I can't read the carved writing, but
+    I bet Bones can!
   itemImage: {fileID: 21300000, guid: 8eedb61c057f443e8aebe67541f16944, type: 3}
   itemCount: 0
   character: Bones

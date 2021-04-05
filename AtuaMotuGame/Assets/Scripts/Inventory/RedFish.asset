@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RedFish
   m_EditorClassIdentifier: 
   itemName: Red Fish
-  itemDescription: 
+  itemDescription: One fish, two fish. Red fish, blue fish.
   itemImage: {fileID: 3599950236515775243, guid: 4b4c12fc61edd8a438d66515f013544d,
     type: 3}
   itemCount: 1
