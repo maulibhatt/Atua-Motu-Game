@@ -19,4 +19,15 @@ public class InitGame : MonoBehaviour
 
     }
 
+    public void StartNewGame()
+    {
+        GameState.Inventory = new List<InvItem>();
+
+        for (int i = 0; i < questList.Count; ++i)
+        {
+            GameState.AddQuest(questList[i]);
+        }
+        GameState.PlayerPosition = playerPosition;
+    }
+
 }

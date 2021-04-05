@@ -17,6 +17,8 @@ public class IntroCutScene : MonoBehaviour
     [SerializeField] private ScrollRect dialogScrollbar;
     [SerializeField] private GameObject IntroStoryPanel;
     [SerializeField] private GameObject InstructionPanel;
+    [SerializeField] private GameObject MainMenuCanvas;
+    [SerializeField] public InitGame GameInitializer;
 
     // Start is called before the first frame update
     void Start()
@@ -50,6 +52,7 @@ public class IntroCutScene : MonoBehaviour
     public void EnableCutSceneCanvas()
     {
         CutSceneCanvas.SetActive(true);
+        MainMenuCanvas.SetActive(false);
         IntroStoryPanel.SetActive(true);
         SetStory();
         RefreshView();
@@ -73,7 +76,8 @@ public class IntroCutScene : MonoBehaviour
     public void BeginGame()
     {
         CutSceneCanvas.SetActive(false);
-        SceneManager.LoadScene("MainScene");
+        GameInitializer.StartNewGame();
+        SceneManager.LoadScene("Town");
 
     }
 

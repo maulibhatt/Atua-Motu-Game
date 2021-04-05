@@ -291,6 +291,87 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 116727179}
   m_CullTransparentMesh: 1
+--- !u!1001 &117683019
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7830815954798969553, guid: 161b9ef63e11a30438006d74b93bf481,
+        type: 3}
+      propertyPath: m_Name
+      value: InitGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 7830815954798969555, guid: 161b9ef63e11a30438006d74b93bf481,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7830815954798969555, guid: 161b9ef63e11a30438006d74b93bf481,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 518.0761
+      objectReference: {fileID: 0}
+    - target: {fileID: 7830815954798969555, guid: 161b9ef63e11a30438006d74b93bf481,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 196.44789
+      objectReference: {fileID: 0}
+    - target: {fileID: 7830815954798969555, guid: 161b9ef63e11a30438006d74b93bf481,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7830815954798969555, guid: 161b9ef63e11a30438006d74b93bf481,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7830815954798969555, guid: 161b9ef63e11a30438006d74b93bf481,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7830815954798969555, guid: 161b9ef63e11a30438006d74b93bf481,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7830815954798969555, guid: 161b9ef63e11a30438006d74b93bf481,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7830815954798969555, guid: 161b9ef63e11a30438006d74b93bf481,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7830815954798969555, guid: 161b9ef63e11a30438006d74b93bf481,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7830815954798969555, guid: 161b9ef63e11a30438006d74b93bf481,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 161b9ef63e11a30438006d74b93bf481, type: 3}
+--- !u!114 &117683020 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7830815954798969552, guid: 161b9ef63e11a30438006d74b93bf481,
+    type: 3}
+  m_PrefabInstance: {fileID: 117683019}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae88495178e1a28448901426e3b29519, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &199521709
 GameObject:
   m_ObjectHideFlags: 0
@@ -562,8 +643,8 @@ RectTransform:
   m_Father: {fileID: 762381896}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.063750006, y: 0.18400002}
-  m_AnchorMax: {x: 0.9250001, y: 0.69000006}
+  m_AnchorMin: {x: 0.063750006, y: 0.076000005}
+  m_AnchorMax: {x: 0.9250001, y: 0.48000002}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -600,9 +681,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "You must talk to \nInstructions:\n\n \tUse the arrow keys or WASD to move
-    around.\n\tPress the left [SHIFT] key to run. \n\tPress [SPACE] to interact with
-    Spirits and island objects"
+  m_Text: "Instructions:\n     Arrow keys/WASD  -  Move around\n     [LEFT SHIFT]  
+    -   Run\n     [SPACE]  -  Attack or Interact with spirits and island objects\n    
+    p/ [ESC]  -  Open Pause Menu\n     H  -  Dig (only active during digging quest)\n    
+    [ENTER]  - Skip to next dialog"
 --- !u!222 &310215173
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -655,7 +737,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 382971094}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -756,8 +838,8 @@ RectTransform:
   m_Father: {fileID: 1688199376}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.09375001, y: 0.45}
-  m_AnchorMax: {x: 0.44375002, y: 0.65}
+  m_AnchorMin: {x: 0.09375001, y: 0.36}
+  m_AnchorMax: {x: 0.44875002, y: 0.544}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1148,6 +1230,8 @@ MonoBehaviour:
   dialogScrollbar: {fileID: 2064539238}
   IntroStoryPanel: {fileID: 116727179}
   InstructionPanel: {fileID: 762381895}
+  MainMenuCanvas: {fileID: 1010468917}
+  GameInitializer: {fileID: 117683020}
 --- !u!4 &627447784
 Transform:
   m_ObjectHideFlags: 0
@@ -1179,7 +1263,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &762381896
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1193,6 +1277,8 @@ RectTransform:
   m_Children:
   - {fileID: 556300161}
   - {fileID: 310215171}
+  - {fileID: 772199997}
+  - {fileID: 1177979373}
   m_Father: {fileID: 948695816}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1240,6 +1326,87 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 762381895}
   m_CullTransparentMesh: 1
+--- !u!1 &772199996
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 772199997}
+  - component: {fileID: 772199999}
+  - component: {fileID: 772199998}
+  m_Layer: 5
+  m_Name: Game Caveats
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &772199997
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772199996}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 762381896}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.063750006, y: 0.5}
+  m_AnchorMax: {x: 0.9175, y: 0.712}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &772199998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772199996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.827451, g: 1, b: 0.827451, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: fb313eea5b0c4400187d34d882aa63c6, type: 3}
+    m_FontSize: 35
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 3
+    m_MaxSize: 40
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Completing a spirit's quest will give you valuable information.   Abandoning
+    or failing some quests will bring you back to the Town the next day.  You can
+    challenge Ochano on Day 4, but you must challenge him by Day 10
+--- !u!222 &772199999
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772199996}
+  m_CullTransparentMesh: 1
 --- !u!1 &799395903
 GameObject:
   m_ObjectHideFlags: 0
@@ -1274,8 +1441,8 @@ RectTransform:
   m_Father: {fileID: 1688199376}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.55374986, y: 0.45}
-  m_AnchorMax: {x: 0.90500003, y: 0.65}
+  m_AnchorMin: {x: 0.55125004, y: 0.36}
+  m_AnchorMax: {x: 0.90500003, y: 0.544}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1392,7 +1559,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &948695816
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1570,7 +1737,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 954564032}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -1620,7 +1787,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1010468918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1633,7 +1800,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 392c29ac3c6974092943ba28829f7a72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CutSceneController: {fileID: 0}
+  CutSceneController: {fileID: 627447783}
 --- !u!114 &1010468919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1790,6 +1957,87 @@ MonoBehaviour:
   m_Spacing: {x: 0, y: 5}
   m_Constraint: 1
   m_ConstraintCount: 1
+--- !u!1 &1177979372
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1177979373}
+  - component: {fileID: 1177979375}
+  - component: {fileID: 1177979374}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1177979373
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177979372}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 762381896}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.7475001, y: 0.096}
+  m_AnchorMax: {x: 0.9512501, y: 0.22200002}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1177979374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177979372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: fb313eea5b0c4400187d34d882aa63c6, type: 3}
+    m_FontSize: 40
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 3
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: '[SPACE]
+
+    to begin'
+--- !u!222 &1177979375
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177979372}
+  m_CullTransparentMesh: 1
 --- !u!1 &1299098496
 GameObject:
   m_ObjectHideFlags: 0
@@ -1822,8 +2070,8 @@ RectTransform:
   m_Father: {fileID: 1688199376}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.2, y: 0.7}
-  m_AnchorMax: {x: 0.8, y: 0.9}
+  m_AnchorMin: {x: 0.2, y: 0.63000005}
+  m_AnchorMax: {x: 0.7975, y: 0.89000005}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1849,7 +2097,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 20d445d9fe7784b2c9a4d16b6cd0e7e0, type: 3}
-    m_FontSize: 60
+    m_FontSize: 70
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -1902,7 +2150,7 @@ RectTransform:
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.09375001, y: 0.14400001}
-  m_AnchorMax: {x: 0.90500003, y: 0.402}
+  m_AnchorMax: {x: 0.90500003, y: 0.27600002}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1928,10 +2176,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: fb313eea5b0c4400187d34d882aa63c6, type: 3}
-    m_FontSize: 14
+    m_FontSize: 45
     m_FontStyle: 0
-    m_BestFit: 1
-    m_MinSize: 10
+    m_BestFit: 0
+    m_MinSize: 4
     m_MaxSize: 150
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -1939,9 +2187,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Use the arrow keys or W,A,S,D to move around. \nInteract with creatures
-    and signs using SPACE.\nPress  'P' or 'escape' to go to the Pause Menu. \nPress
-    ENTER to skip to next dialog.\nWalk over items to collect. Press 'H' to dig."
+  m_Text: Save the spirits, but be careful who you trust...
 --- !u!222 &1447452920
 CanvasRenderer:
   m_ObjectHideFlags: 0
