@@ -27777,6 +27777,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1830173939412956592, guid: 7b17af00a452643da8e9d5a56b7d75c5,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 39
+      objectReference: {fileID: 0}
     - target: {fileID: 1830173939873694617, guid: 7b17af00a452643da8e9d5a56b7d75c5,
         type: 3}
       propertyPath: m_Name
@@ -28033,6 +28038,11 @@ PrefabInstance:
     - target: {fileID: 3473449425962740865, guid: 88441666fab69476fa07dd70084ad0e1,
         type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3473449426255144783, guid: 88441666fab69476fa07dd70084ad0e1,
+        type: 3}
+      propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3473449427659052463, guid: 88441666fab69476fa07dd70084ad0e1,
