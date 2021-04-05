@@ -51,4 +51,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d309f946f42116a469d2545cfe93261b, type: 2}
   - {fileID: 11400000, guid: d5dd5acdfd16047f49d1870cdb497917, type: 2}
   - {fileID: 11400000, guid: ae864e4ce2da442a29dbc9224632a99c, type: 2}
+  - {fileID: 11400000, guid: deddedc49e34145ab84c8e9ee558f5f5, type: 2}
+  - {fileID: 11400000, guid: 8cd528358b2364c5b940e9cbcbf95c6f, type: 2}
   playerPosition: {x: -14.65, y: -0.23}

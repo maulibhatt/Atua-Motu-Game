@@ -178,13 +178,7 @@ public class BranchingDialogController : MonoBehaviour
         if ((bool)myQuest.myStory.variablesState["accepted_quest"])
         {
             GameState.SetQuestStatus(myQuest, false);
-            //theQM.InitiatePlayerQuest(); // Probably not necessary anymore
-
-            // Do something different if it is Erised. Quest is automatically completd once accepted
-            // if (myQuest.npcName == "Erised")
-            // {
-            //     theQM.SetNPCQuestStatus(myQuest.npcName, true);
-            // }
+            
         }
 
         // Check if the quest is complete
