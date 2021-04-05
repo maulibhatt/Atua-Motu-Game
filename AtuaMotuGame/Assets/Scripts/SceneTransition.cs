@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 public class SceneTransition : MonoBehaviour
 {
     public Vector2 position;
@@ -17,4 +17,5 @@ public class SceneTransition : MonoBehaviour
             SceneManager.LoadScene(scene);
         }
     }
+
 }
