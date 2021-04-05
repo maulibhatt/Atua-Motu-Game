@@ -28,6 +28,7 @@ public class Boulder : MonoBehaviour
                 GameObject.Find("HealthManager").GetComponent<HealthManager>().removeLife();
                 if (GameObject.Find("HealthManager").GetComponent<HealthManager>().GetLives() == 0)
                 {
+                    GameState.DeactivateQuest("Rocky");
                     GameState.StartNewDay();
                     SceneManager.LoadScene("Town");
                 } else

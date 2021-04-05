@@ -67,6 +67,7 @@
      <Compile Include="Assets\Scripts\NPCFollowAI.cs" />
      <Compile Include="Assets\Scripts\BeetleMovement.cs" />
      <Compile Include="Assets\Ink\Demos\Basic Demo\Scripts\QuitGameOnKeypress.cs" />
+     <Compile Include="Assets\Gateway.cs" />
      <Compile Include="Assets\GoBack.cs" />
      <Compile Include="Assets\Scripts\SceneTransition.cs" />
      <Compile Include="Assets\SpawnManager.cs" />
@@ -94,7 +95,6 @@
      <Compile Include="Assets\Scripts\BranchingDialogController.cs" />
      <Compile Include="Assets\Scripts\Inventory\PhysicalInventoryItem.cs" />
      <Compile Include="Assets\Scripts\FinalBossDialog.cs" />
-     <Compile Include="Assets\IntroCutScene.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

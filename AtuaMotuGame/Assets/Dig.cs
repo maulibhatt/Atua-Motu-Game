@@ -34,7 +34,7 @@ public class Dig : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.H))
+        if (Input.GetKeyDown(KeyCode.H) && currentDigs > 0 && GameState.CheckActiveString("Bones"))
         {
             currentDigs--;
             Collider2D item = Physics2D.OverlapCircle(this.transform.position, digRadius, diggable);
