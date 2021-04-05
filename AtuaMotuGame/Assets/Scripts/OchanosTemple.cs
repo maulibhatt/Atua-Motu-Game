@@ -12,6 +12,8 @@ public class OchanosTemple : MonoBehaviour
     private FinalBossDialog BossDialogController;
     private GameObject player;
     private bool boxActive = false;
+    public GameObject oldSound;
+    public GameObject newSound;
     
     void Start()
     {
@@ -31,6 +33,8 @@ public class OchanosTemple : MonoBehaviour
                 BossDialogController.EnableBossCanvas();
                 player.GetComponent<PlayerMovement>().EnablePlayerMovement();
                 playerInRange = false;
+                oldSound.SetActive(false);
+                newSound.SetActive(true);
             } else
             {
                 StartCoroutine("ShowWarning");
