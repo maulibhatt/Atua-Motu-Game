@@ -822,7 +822,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -27782,6 +27782,16 @@ PrefabInstance:
       propertyPath: m_FontData.m_FontSize
       value: 39
       objectReference: {fileID: 0}
+    - target: {fileID: 1830173939412956606, guid: 7b17af00a452643da8e9d5a56b7d75c5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1830173939773636716, guid: 7b17af00a452643da8e9d5a56b7d75c5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1830173939873694617, guid: 7b17af00a452643da8e9d5a56b7d75c5,
         type: 3}
       propertyPath: m_Name
@@ -27892,8 +27902,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1830173940210219552, guid: 7b17af00a452643da8e9d5a56b7d75c5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b17af00a452643da8e9d5a56b7d75c5, type: 3}
+--- !u!1 &1830173938339367626 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1830173939873694617, guid: 7b17af00a452643da8e9d5a56b7d75c5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1830173938339367625}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1830173938339367627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1830173938339367626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14e6f2851c0e44062aab0e36d789dae1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4476523638304420816
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -31080,7 +31080,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &273246571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31411,6 +31411,7 @@ GameObject:
   - component: {fileID: 537724866}
   - component: {fileID: 537724865}
   - component: {fileID: 537724864}
+  - component: {fileID: 537724863}
   m_Layer: 5
   m_Name: HealthUI
   m_TagString: Untagged
@@ -31418,6 +31419,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &537724863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 537724862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac54b7610a86a40d395225b5f9439e4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &537724864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37600,7 +37613,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1936730073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37746,7 +37759,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1996918146
 MonoBehaviour:
   m_ObjectHideFlags: 0
