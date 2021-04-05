@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2300,6 +2300,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3446960805918521758, guid: 28deef5e7a639ef498f0e095beb0349c,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3446960805918521758, guid: 28deef5e7a639ef498f0e095beb0349c,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3446960805918521758, guid: 28deef5e7a639ef498f0e095beb0349c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -275.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3446960805918521758, guid: 28deef5e7a639ef498f0e095beb0349c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -210.7
+      objectReference: {fileID: 0}
     - target: {fileID: 3446960806182508336, guid: 28deef5e7a639ef498f0e095beb0349c,
         type: 3}
       propertyPath: m_Pivot.x
@@ -2405,10 +2425,55 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3446960806182508338, guid: 28deef5e7a639ef498f0e095beb0349c,
+        type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3446960806182508365, guid: 28deef5e7a639ef498f0e095beb0349c,
         type: 3}
       propertyPath: m_Name
       value: HealthUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 3446960807407541623, guid: 28deef5e7a639ef498f0e095beb0349c,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3446960807407541623, guid: 28deef5e7a639ef498f0e095beb0349c,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3446960807407541623, guid: 28deef5e7a639ef498f0e095beb0349c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -313.88184
+      objectReference: {fileID: 0}
+    - target: {fileID: 3446960807407541623, guid: 28deef5e7a639ef498f0e095beb0349c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -210.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3446960807476131624, guid: 28deef5e7a639ef498f0e095beb0349c,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3446960807476131624, guid: 28deef5e7a639ef498f0e095beb0349c,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3446960807476131624, guid: 28deef5e7a639ef498f0e095beb0349c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -353.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3446960807476131624, guid: 28deef5e7a639ef498f0e095beb0349c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -210.7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28deef5e7a639ef498f0e095beb0349c, type: 3}
