@@ -18,8 +18,8 @@ Ms. Pie: Can you find me 6 apples? -> questions
 == questions ==
 
 * {has_items == true} [Give Apples] You: Here you go!
-    ~giveItems(6)
     Ms. Pie: These are perfect!
+    ~giveItems(6)
     -> after_quest
 
 * [Ask why] You: Why do you need apples?
@@ -30,8 +30,8 @@ Ms. Pie: Can you find me 6 apples? -> questions
     Ms. Pie: They'll be somewhere around the town. Some of them might be easier to find than others.
     Ms. Pie: It'll help to explore the area. Check out The Inn and visit the trees south of Paddle lake. 
     -> questions
+    
 + [Leave] You: Okay, I'll look around. -> END
-
 
 == declined ==
 Ms. Pie: Alright, come back when you can! -> endpart
