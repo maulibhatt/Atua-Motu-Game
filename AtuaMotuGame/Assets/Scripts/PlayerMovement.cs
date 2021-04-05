@@ -93,8 +93,14 @@ public class PlayerMovement : MonoBehaviour
                 rb.MovePosition(rb.position + lastMovement * moveSpeed * Time.fixedDeltaTime);
             }
             else
-            {
-                rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+            {   if (Input.GetKey(KeyCode.LeftShift))
+                {
+                    rb.MovePosition(rb.position + movement * 10f * Time.fixedDeltaTime);
+                }
+                else
+                {
+                    rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+                }
             }
         }
     }

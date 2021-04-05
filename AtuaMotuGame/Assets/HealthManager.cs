@@ -49,6 +49,10 @@ public class HealthManager : MonoBehaviour
         }
     }
 
+    public int GetLives()
+    {
+        return Instance.currentLives;
+    }
     void displayLives()
     {
         int i = Instance.currentLives;

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
 public class Boulder : MonoBehaviour
 {
     public float boulderSpeed;
@@ -25,7 +26,14 @@ public class Boulder : MonoBehaviour
             if (!other.gameObject.GetComponent<PlayerBoulderManager>().getSafety())
             {
                 GameObject.Find("HealthManager").GetComponent<HealthManager>().removeLife();
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                if (GameObject.Find("HealthManager").GetComponent<HealthManager>().GetLives() == 0)
+                {
+                    GameState.StartNewDay();
+                    SceneManager.LoadScene("Town");
+                } else
+                {
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                }
             }
         }
 
