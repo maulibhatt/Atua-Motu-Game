@@ -41,6 +41,7 @@
      <Compile Include="Assets\DigUI.cs" />
      <Compile Include="Assets\Scripts\SignalSender.cs" />
      <Compile Include="Assets\PlayerBoulderManager.cs" />
+     <Compile Include="Assets\IntroCutScene.cs" />
      <Compile Include="Assets\Scripts\BullyManager.cs" />
      <Compile Include="Assets\Scripts\ExitBounds.cs" />
      <Compile Include="Assets\Scripts\Quests\QuestManager.cs" />

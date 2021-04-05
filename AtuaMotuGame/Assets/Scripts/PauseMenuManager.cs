@@ -54,7 +54,7 @@ public class PauseMenuManager : MonoBehaviour
         UnpauseGame();
     }
 
-    void PauseGame()
+    public void PauseGame()
     {
         pausePanel.SetActive(true);
         Time.timeScale = 0f;
