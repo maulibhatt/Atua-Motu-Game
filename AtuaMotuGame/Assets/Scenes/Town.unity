@@ -12748,7 +12748,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1460766734}
         m_TargetAssemblyTypeName: PauseMenuManager, Assembly-CSharp
         m_MethodName: ExitGame
         m_Mode: 1
@@ -64745,6 +64745,18 @@ Transform:
   m_Father: {fileID: 1710189889}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1460766734 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3473449426347288590, guid: 88441666fab69476fa07dd70084ad0e1,
+    type: 3}
+  m_PrefabInstance: {fileID: 486797952}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52b8ba4bada7d4914952adb2cc9d707b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1464395428
 PrefabInstance:
   m_ObjectHideFlags: 0
