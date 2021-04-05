@@ -90,8 +90,9 @@ public class BranchingDialogController : MonoBehaviour
     {
         dialogCanvas.SetActive(false);
         player.GetComponent<PlayerMovement>().EnablePlayerMovement();
-        if (GameState.CheckComplete(myQuest))
+        if (GameState.CheckComplete(myQuest) && !GameState.CheckDayPassed(myQuest))
         {
+            GameState.SetDayPassed(myQuest);
             GameState.StartNewDay();
             SceneManager.LoadScene("Town");
         }

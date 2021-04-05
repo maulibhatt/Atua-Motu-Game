@@ -25,9 +25,6 @@ public class OchanosTemple : MonoBehaviour
         if (playerInRange && Input.GetKeyDown(KeyCode.Space))
         {
             // activate temple
-            BossDialogController.EnableBossCanvas();
-            player.GetComponent<PlayerMovement>().EnablePlayerMovement();
-            playerInRange = false;
             if (GameState.day > 3)
             {
                 Debug.Log("Temple Canvas activate!");
