@@ -247,6 +247,30 @@ public static class GameState
         return false;
     }
 
+    public static bool CheckDayPassed(Quest quest)
+    {
+        for (int i = 0; i < questList.Count; ++i)
+        {
+            if (questList[i].Quest == quest)
+            {
+                return questList[i].DayPassed;
+            }
+        }
+        return false;
+    }
+
+    public static bool SetDayPassed(Quest quest)
+    {
+        for (int i = 0; i < questList.Count; ++i)
+        {
+            if (questList[i].Quest == quest)
+            {
+                return questList[i].DayPassed = true;
+            }
+        }
+        return false;
+    }
+
     public static void DeactivateQuest(string Quest)
     {
         for (int i = 0; i < questList.Count; ++i)
@@ -387,6 +411,7 @@ public class GameQuest
     bool complete;
     bool active;
     string questName;
+    bool dayPassed;
 
 
     public GameQuest(Quest quest, bool complete, bool active, string q)
@@ -419,6 +444,12 @@ public class GameQuest
     {
         get { return questName; }
         set { questName = value; }
+    }
+
+    public bool DayPassed
+    {
+        get { return dayPassed; }
+        set { dayPassed  = value; }
     }
 }
 
