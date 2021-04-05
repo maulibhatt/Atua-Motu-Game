@@ -74,7 +74,17 @@ public class PauseMenuManager : MonoBehaviour
 
     public void Abandon()
     {
-        //needs to be coded with scene and quest shit
+        List<string> quests = new List<string>() { "Rocky", "Igneous", "Erised", "Bones" };
+        foreach (string quest in quests)
+        {
+            if (GameState.CheckActiveString(quest))
+            {
+                GameState.DeactivateQuest(quest);
+            }
+        }
+        GameState.StartNewDay();
+        SceneManager.LoadScene("Town");
+
     }
 
     public void ViewActiveQuests()
