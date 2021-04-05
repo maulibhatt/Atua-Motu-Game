@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: MapleMazeQuest
   m_EditorClassIdentifier: 
   myDialog: {fileID: 4900000, guid: 6fa6d60ab293242c3909695b979e9a1e, type: 3}
-  myQuestCompleted: 1
-  myQuestActive: 0
   questItem: {fileID: 0}
   npcGivesItem: 0
   sacrificeItem: {fileID: 0}
   itemCountNeeded: 0
   npcName: Maple
+  QuestDescription: Rescue Maple's sister from the maze
