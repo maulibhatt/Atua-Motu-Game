@@ -26,7 +26,7 @@ public class InitGame : MonoBehaviour
         GameState.IsFollowedByBirch = false;
         GameState.LockBirchMovement = false;
         GameState.LadderEnabled = false;
-        GameState.SetLastSceneLocation = "";
+        GameState.SetLastSceneLocation("");
         GameState.day = 1;
 
         for (int i = 0; i < questList.Count; ++i)
