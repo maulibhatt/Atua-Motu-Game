@@ -15,6 +15,7 @@ public class ExitBounds : MonoBehaviour
             manager.removeLife();
             if (GameObject.Find("HealthManager").GetComponent<HealthManager>().GetLives() == 0)
             {
+                GameState.DeactivateQuest("Igneous");
                 GameState.StartNewDay();
                 SceneManager.LoadScene("Town");
             }

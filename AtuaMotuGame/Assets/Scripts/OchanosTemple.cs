@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class OchanosTemple : MonoBehaviour
@@ -10,6 +11,7 @@ public class OchanosTemple : MonoBehaviour
     public SignalSender clue;
     private FinalBossDialog BossDialogController;
     private GameObject player;
+    private bool boxActive = false;
     
     void Start()
     {
@@ -23,10 +25,16 @@ public class OchanosTemple : MonoBehaviour
         if (playerInRange && Input.GetKeyDown(KeyCode.Return))
         {
             // activate temple
-            Debug.Log("Temple Canvas activate!");
-            BossDialogController.EnableBossCanvas();
-            player.GetComponent<PlayerMovement>().EnablePlayerMovement();
-            playerInRange = false;
+            if (GameState.day > 3)
+            {
+                Debug.Log("Temple Canvas activate!");
+                BossDialogController.EnableBossCanvas();
+                player.GetComponent<PlayerMovement>().EnablePlayerMovement();
+                playerInRange = false;
+            } else
+            {
+                StartCoroutine("ShowWarning");
+            }
             
         }
     }
@@ -46,6 +54,21 @@ public class OchanosTemple : MonoBehaviour
         {
             playerInRange = false;
             clue.Raise();
+        }
+    }
+
+    IEnumerator ShowWarning()
+    {
+        if (!boxActive)
+        {
+            boxActive = true;
+            GameObject SignDialogBox = GameObject.Find("Sign Dialog Canvas").transform.GetChild(1).gameObject;
+            GameObject text = SignDialogBox.transform.GetChild(0).gameObject;
+            text.GetComponent<Text>().text = "Come back after Day 3!";
+            SignDialogBox.SetActive(true);
+            yield return new WaitForSeconds(5f);
+            SignDialogBox.SetActive(false);
+            boxActive = false;
         }
     }
 

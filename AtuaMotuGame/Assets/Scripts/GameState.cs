@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Ink.Runtime;
+using UnityEngine.SceneManagement;
 
 public static class GameState
 {
@@ -176,7 +177,7 @@ public static class GameState
         }
         if (foundItem == false)
         {
-            questList.Add(new GameQuest(quest, false, false));
+            questList.Add(new GameQuest(quest, false, false, quest.npcName));
         }
     }
 
@@ -217,6 +218,18 @@ public static class GameState
         return false;
     }
 
+    public static bool CheckActiveString(string quest)
+    {
+        for (int i = 0; i < questList.Count; ++i)
+        {
+            if (questList[i].QuestName == quest)
+            {
+                return questList[i].Active;
+            }
+        }
+        return false;
+    }
+
     public static bool CheckComplete(Quest quest)
     {
         for (int i = 0; i < questList.Count; ++i)
@@ -227,6 +240,24 @@ public static class GameState
             }
         }
         return false;
+    }
+
+    public static void DeactivateQuest(string Quest)
+    {
+        for (int i = 0; i < questList.Count; ++i)
+        {
+            if (questList[i].QuestName == Quest)
+            {
+                questList[i].Active = false;
+            }
+        }
+    }
+    public static void AbandonQuest(string Quest)
+    {
+        DeactivateQuest(Quest);
+        StartNewDay();
+        SceneManager.LoadScene("Town");
+
     }
 
     public static bool CheckPotentialCompletion(string name)
@@ -350,13 +381,15 @@ public class GameQuest
     Quest quest;
     bool complete;
     bool active;
+    string questName;
 
 
-    public GameQuest(Quest quest, bool complete, bool active)
+    public GameQuest(Quest quest, bool complete, bool active, string q)
     {
         this.quest = quest;
         this.complete = complete;
         this.active = active;
+        this.questName = q;
     }
 
     public Quest Quest
@@ -375,6 +408,12 @@ public class GameQuest
     {
         get {return active; }
         set { active = value;}
+    }
+
+    public string QuestName
+    {
+        get { return questName; }
+        set { questName = value; }
     }
 }
 
