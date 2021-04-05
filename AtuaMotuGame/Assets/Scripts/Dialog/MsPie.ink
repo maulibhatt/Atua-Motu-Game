@@ -13,7 +13,7 @@ Ms. Pie: Hey there, Alex! Good of you to come around. Do you have time to help m
 == accepted ==
 ~ accepted_quest = true
 
-Ms. Pie: Can you find me 6 apples? I'm going to make some custard in the meantime. -> questions
+Ms. Pie: Can you find me 6 apples? -> questions
 
 == questions ==
 
@@ -49,7 +49,7 @@ Ms. Pie: These will make perfect tarts. Thanks for getting me those apples. -> i
     Ms. Pie: Hmmm...
     Ms. Pie: I will tell you this - be careful about who you trust. Not everyone is what they seem.
     Ms. Pie: You may meet someone named Erised, who definitely can't be trusted.
-    Ms. Pie: Some folks are trying to guide you towards destruction, and you will need to ...
+    Ms. Pie: Some folks are trying to guide you towards your destruction, and you will need to ...
     Ms. Pie: ... make some very difficult but important decisions. -> info
 
 + [Leave] You: I'll talk to you later! Goodbye. -> END

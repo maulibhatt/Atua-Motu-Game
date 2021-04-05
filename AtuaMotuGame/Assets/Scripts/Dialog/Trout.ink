@@ -38,8 +38,7 @@ Trout: Thank you for catching those blue fish for me! -> info
 
 == info ==
 
-* [Ask for advice] You: Do you have any advice for me?
-    Trout: I assume you mean related to your encounter with Ochano.
+* [Ask about Ochano] You: Do you know anything about Ochano?
     Trout: Let me tell you something - Ochano has quite the temper. 
     Trout: If he gets angry and wants to destroy something, you might want to direct his anger to the volcano.
     Trout: Setting lava on fire won't harm the surrounding area. -> info

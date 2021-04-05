@@ -21,7 +21,7 @@ Rocky: Hey Alex.
 Rocky: My rock climbing gloves are at the top of this cliff. -> questions
 
 == questions ==
-* {has_items == true} [Give gloves] You: Actually, they're right here!
+* {has_items == true} [Give gloves] You: Actually, your gloves are right here!
     ~giveItems(2)
     Rocky: You found them! 
     -> after_quest
@@ -34,7 +34,8 @@ Rocky: My rock climbing gloves are at the top of this cliff. -> questions
 * [Is it safe?] You: Uh... Rocky, is this safe?
     Rocky: It's definitely not. Rock climbing takes a lot out of you.
     Rocky: I expect you will only have enough energy to climb up 3 times, so try not to get knocked down.
-    Rocky: But you can always rest and try again tomorrow if you get too tired! -> questions
+    Rocky: If you press up agaist the ledges, you'll be safe from falling boulders.
+    Rocky: But if you get too tired, you can always rest and try again tomorrow! -> questions
 
 + [Leave]  You: Okay, I'll give it a shot. -> END
 
@@ -50,7 +51,10 @@ Rocky: Thank you so much for finding my favourite rock climbing gloves for me! -
 == info ==
 
 * [Ask for advice] You: Anytime! I'm nervous about meeting Ochano. Can you give me some advice?
-    Rocky: Sure! Ochano is pretty vicious, but he loves riddles. INSERT RIDDLE ANSWER -> info
+    Rocky: Sure! Ochano is pretty vicious, but he loves riddles. 
+    Rocky: He will probably tell you a variation of his favourite riddle. 
+    Rocky: I don't remember all of it, but I do remember there was a part about the world ending in ice. 
+    Rocky: Keep that in mind, and good luck! -> info
     
 + [Leave] You: See you later! -> END
 
