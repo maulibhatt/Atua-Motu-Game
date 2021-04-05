@@ -13,6 +13,7 @@ public static class GameState
     static bool ladderEnabled = false;
     static bool lockBirchMovement = false;
     static string lastSceneLocation = "";
+    public static int day = 1;
 
     static Dictionary<string, Dictionary<string, Vector3>> spawnLocations = new Dictionary<string, Dictionary<string, Vector3>>(){
         {"DiggingInTheDesert", new Dictionary<string, Vector3>(){
@@ -45,7 +46,7 @@ public static class GameState
                 }
         },
         {"Town", new Dictionary<string, Vector3>(){
-                {"DiggingInTheDesert",  new Vector3(-17.54f, 22.78f, 0f) },
+                {"DiggingInTheDesert",  new Vector3(31.8f, 29.9f, 0f) },
                 { "Forest", new Vector3(-20.2f, -7.3f, 0f) },
                 { "Beach", new Vector3(45.5f, 17.58f, 0f) },
                 { "Volcano", new Vector3(36.7f, -14.7f, 0f) },
@@ -60,13 +61,23 @@ public static class GameState
     }
     public static Vector3 SpawnPosition(string currentScene)
     {
-        if (lastSceneLocation == "" || currentScene == "Rock_Climbn" || currentScene == "IceCave") {
+        if (lastSceneLocation == "") {
             return new Vector3(-1,-1,-1);
         }
-    else
+        else if (currentScene == "Rock_Climbn" || currentScene == "IceCave")
+        {
+            return new Vector3(-2, -2, -2);
+        }
+     else
         {
         return spawnLocations[currentScene][lastSceneLocation];
         }
+    }
+
+    public static void StartNewDay()
+    {
+        day++;
+        lastSceneLocation = "";
     }
 
     public static Vector2 PlayerPosition

@@ -113,6 +113,7 @@
     <Compile Include="Assets/Scripts/BranchingDialogController.cs" />
     <Compile Include="Assets/Scripts/Inventory/PhysicalInventoryItem.cs" />
     <Compile Include="Assets/Scripts/FinalBossDialog.cs" />
+    <Compile Include="Assets/GoBack.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
