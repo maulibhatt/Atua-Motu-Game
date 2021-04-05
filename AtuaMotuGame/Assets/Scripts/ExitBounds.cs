@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ExitBounds : MonoBehaviour
 {
@@ -12,6 +13,11 @@ public class ExitBounds : MonoBehaviour
         {
             arena.EndBattle();
             manager.removeLife();
+            if (GameObject.Find("HealthManager").GetComponent<HealthManager>().GetLives() == 0)
+            {
+                GameState.StartNewDay();
+                SceneManager.LoadScene("Town");
+            }
         }
         else if (other.CompareTag("Bully"))
         {
