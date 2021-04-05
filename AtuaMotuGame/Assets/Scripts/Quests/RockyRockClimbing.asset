@@ -18,3 +18,4 @@ MonoBehaviour:
   sacrificeItem: {fileID: 0}
   itemCountNeeded: 2
   npcName: Rocky
+  QuestDescription: Find Rocky's gloves at the top of the mountain

@@ -18,3 +18,4 @@ MonoBehaviour:
   sacrificeItem: {fileID: 0}
   itemCountNeeded: 12
   npcName: Mantis
+  QuestDescription: Exterminate beetles for Mantis in Town

@@ -18,3 +18,4 @@ MonoBehaviour:
   sacrificeItem: {fileID: 0}
   itemCountNeeded: 10
   npcName: Trout
+  QuestDescription: Catch fish for Trout at the Beach

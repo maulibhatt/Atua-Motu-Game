@@ -9,7 +9,9 @@ public class PauseMenuManager : MonoBehaviour
     private bool isPaused;
     public GameObject pausePanel;
     public GameObject inventoryPanel;
+    public GameObject questsPanel;
     private bool isInventoryActive = false;
+    private bool isQuestsActive = false;
     //public string mainMenu;
 
     void Start()
@@ -29,6 +31,14 @@ public class PauseMenuManager : MonoBehaviour
                 isInventoryActive = false;
                 return;
             }
+
+            if (isQuestsActive)
+            {
+                pausePanel.SetActive(true);
+                questsPanel.SetActive(false);
+                isQuestsActive = false;
+                return;
+            }
             isPaused = !isPaused;
             if (isPaused)
             {
@@ -46,6 +56,13 @@ public class PauseMenuManager : MonoBehaviour
         pausePanel.SetActive(false);
         inventoryPanel.SetActive(true);
         isInventoryActive = true;
+    }
+
+    public void ShowQuests()
+    {
+        pausePanel.SetActive(false);
+        questsPanel.SetActive(true);
+        isQuestsActive = true;
     }
 
     public void Resume()
@@ -74,7 +91,17 @@ public class PauseMenuManager : MonoBehaviour
 
     public void Abandon()
     {
-        //needs to be coded with scene and quest shit
+        List<string> quests = new List<string>() { "Rocky", "Igneous", "Erised", "Bones" };
+        foreach (string quest in quests)
+        {
+            if (GameState.CheckActiveString(quest))
+            {
+                GameState.DeactivateQuest(quest);
+            }
+        }
+        GameState.StartNewDay();
+        SceneManager.LoadScene("Town");
+
     }
 
     public void ViewActiveQuests()

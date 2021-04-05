@@ -18,3 +18,4 @@ MonoBehaviour:
   sacrificeItem: {fileID: 0}
   itemCountNeeded: 3
   npcName: Igneous
+  QuestDescription: Collect necklaces for Igneous in the Volcano

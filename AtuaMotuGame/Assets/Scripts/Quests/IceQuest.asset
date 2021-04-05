@@ -18,3 +18,4 @@ MonoBehaviour:
   sacrificeItem: {fileID: 0}
   itemCountNeeded: 0
   npcName: Snowy
+  QuestDescription: Talk to Snowy in the Ice Caves
