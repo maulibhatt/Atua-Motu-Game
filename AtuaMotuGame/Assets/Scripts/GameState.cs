@@ -10,6 +10,7 @@ public static class GameState
     static List<GameQuest> questList = new List<GameQuest>();
     static List<bool> apples = new List<bool>(new bool[6]);
     static bool isFollowedByBirch = false;
+    static bool ladderEnabled = false;
     static bool lockBirchMovement = false;
     static string lastSceneLocation = "";
     public static int day = 1;
@@ -99,6 +100,11 @@ public static class GameState
     {
         get { return isFollowedByBirch;}
         set { isFollowedByBirch = value;}
+    }
+    public static bool LadderEnabled
+    {
+        get { return ladderEnabled;}
+        set { ladderEnabled = value;}
     }
     public static bool LockBirchMovement
     {
@@ -291,6 +297,15 @@ public static class GameState
                 }
             case "Rocky":
                 if (SearchItem("Rock Climbing Glove") >= 2)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            case "Snowy":
+                if (ladderEnabled)
                 {
                     return true;
                 }

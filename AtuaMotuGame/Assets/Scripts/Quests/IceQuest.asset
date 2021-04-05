@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96e6bef13ed05443f991da5d060fc9bd, type: 3}
   m_Name: IceQuest
   m_EditorClassIdentifier: 
-  myDialog: {fileID: 4900000, guid: d01d76c27a1684d6588890ba14271e2b, type: 3}
+  myDialog: {fileID: 4900000, guid: 5cc886ff085b94307af89d5177ff7dca, type: 3}
   questItem: {fileID: 0}
   npcGivesItem: 0
   sacrificeItem: {fileID: 0}
