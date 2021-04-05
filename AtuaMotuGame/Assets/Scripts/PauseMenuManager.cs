@@ -10,6 +10,7 @@ public class PauseMenuManager : MonoBehaviour
     public GameObject pausePanel;
     public GameObject inventoryPanel;
     public GameObject questsPanel;
+    public GameObject InstructionPanel;
     private bool isInventoryActive = false;
     private bool isQuestsActive = false;
     //public string mainMenu;
@@ -107,5 +108,17 @@ public class PauseMenuManager : MonoBehaviour
     public void ViewActiveQuests()
     {
         //add code here
+    }
+
+    public void ShowHowToPlay()
+    {
+        InstructionPanel.SetActive(true);
+        pausePanel.SetActive(false);
+    }
+
+    public void HideHowToPlay()
+    {
+        InstructionPanel.SetActive(false);
+        pausePanel.SetActive(true);
     }
 }
