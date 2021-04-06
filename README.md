@@ -11,12 +11,19 @@ To view game information and Unity project files, open the AtuaMotuGame folder a
 
 ## Controls
 Move: Arrow Keys and WASD
+
 Interact with Signs and NPCs: Approach them and press SPACE
+
 Attack: Press SPACE
+
 Dig: Press H once you activate the digging quest
+
 Pause Menu: Press P or ESC to access pause menu
+
 Inventory: Press P or ESC access pause menu and click on Inventory
+
 Dialog: Point and click the desired choices to respond to NPCs.
+
 Items: Walk over an item to collect it.
 
 ## Features
