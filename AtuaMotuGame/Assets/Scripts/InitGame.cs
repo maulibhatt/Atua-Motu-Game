@@ -34,6 +34,10 @@ public class InitGame : MonoBehaviour
         {
             GameState.AddQuest(questList[i]);
         }
+        for (int i = 0; i < questList.Count; ++i)
+        {
+            GameState.ReInitializeQuest(questList[i]);
+        }
         GameState.PlayerPosition = playerPosition;
     }
 

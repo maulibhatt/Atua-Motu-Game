@@ -211,6 +211,18 @@ public static class GameState
         }
     }
 
+    public static void ReInitializeQuest(Quest quest)
+    {
+        for (int i = 0; i < questList.Count; ++i)
+        {
+            if (questList[i].Quest == quest)
+            {
+                questList[i].Active = false;
+                questList[i].Complete = false;
+            }
+        }
+    }
+
     public static bool CheckActive(Quest quest)
     {
         for (int i = 0; i < questList.Count; ++i)
