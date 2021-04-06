@@ -22,8 +22,8 @@ public class InitGame : MonoBehaviour
     public void StartNewGame()
     {
         GameState.Inventory = new List<InvItem>();
-        GameState.Apples = new List<bool>();
-        GameState.Gems = new List<bool>();
+        GameState.Apples = new List<bool>(new bool[6]);
+        GameState.Gems = new List<bool>(new bool[28]);
         GameState.IsFollowedByBirch = false;
         GameState.LockBirchMovement = false;
         GameState.LadderEnabled = false;

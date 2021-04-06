@@ -34,7 +34,7 @@ Erised: I need you to find me 8 blue gems. -> questions
     Erised: You can slash at the violet stones with your sword to break through them. 
     Erised: Some of the violet stones will have blue gems behind them.
     Erised: Be careful, though. I expect this is a fairly tiring job. 
-    Erised: After you dig through 15 violet stones, I want you to take some rest and come back tomorrow. 
+    Erised: After you dig through 20 violet stones, I want you to take some rest and come back tomorrow. 
     Erised: These stones will grow back by then, but the gems inside them will not.
     Erised: So if you leave, make sure you remember where you've already dug. -> questions
 
