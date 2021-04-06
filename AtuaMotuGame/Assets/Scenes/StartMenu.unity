@@ -682,9 +682,9 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Instructions:\n     Arrow keys/WASD  -  Move around\n     [LEFT SHIFT]  
-    -   Run\n     [SPACE]  -  Attack or Interact with spirits and island objects\n    
-    p/ [ESC]  -  Open Pause Menu\n     H  -  Dig (only active during digging quest)\n    
-    [ENTER]  - Skip to next dialog"
+    -   Run\n     [SPACE]  -  Interact with spirits and island objects\n     [SPACE] 
+    -  Attack or Dig \n     p/ [ESC]  -  Open Pause Menu\n     H  -  Dig (only active
+    during digging quest)\n     [ENTER]  - Skip to next dialog"
 --- !u!222 &310215173
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1263,7 +1263,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &762381896
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1559,7 +1559,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &948695816
 RectTransform:
   m_ObjectHideFlags: 0
