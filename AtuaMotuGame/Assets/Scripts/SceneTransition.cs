@@ -39,6 +39,12 @@ public class SceneTransition : MonoBehaviour
 
     private void performSceneTransition()
     {
+        GameObject HM = GameObject.Find("HealthManager");
+        if (HM != null)
+        {
+            Destroy(HM);
+        }
+
         if (!givePrompt)
         {
             GameState.SetLastSceneLocation(SceneManager.GetActiveScene().name);
@@ -48,6 +54,7 @@ public class SceneTransition : MonoBehaviour
         {
             GameState.AbandonQuest(quest);
         }
+
     }
 
     private void closeMenu()
