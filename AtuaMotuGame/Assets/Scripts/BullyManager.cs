@@ -11,7 +11,6 @@ public class BullyManager : MonoBehaviour
     {
         if (!GameState.CheckComplete(quest))
         {
-            Debug.Log("Here");
             for (int i = 0; i < (3 - GameState.SearchItem("Bone Necklace")); ++i)
             {
                 portals[i].SetActive(true); 

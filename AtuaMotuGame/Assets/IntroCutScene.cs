@@ -101,7 +101,6 @@ public class IntroCutScene : MonoBehaviour
 
     void MakeNewDialog(string newDialog)
     {
-        Debug.Log("The next line = " + newDialog);
         // Instantiates the dialog object (the prefab) on the dialog holder
         BossDialogObject newDialogObject = Instantiate(dialogPrefab, dialogHolder.transform).GetComponent<BossDialogObject>();
         StartCoroutine(ScrollCo());

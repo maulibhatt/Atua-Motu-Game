@@ -126,7 +126,6 @@ public class BranchingDialogController : MonoBehaviour
              // Check if player's has the potential to be done the quest, then go 
             if (GameState.CheckPotentialCompletion(myQuest.npcName))
             {
-                Debug.Log("has_items has been marked true");
                 myQuest.myStory.variablesState["has_items"] = true;
             }
             else {
@@ -150,10 +149,6 @@ public class BranchingDialogController : MonoBehaviour
                 myQuest.myStory.ChoosePathString("after_quest");
             }
         }
-        else
-        {
-            Debug.Log("story set up error.");
-        }
     }
 
     public void FinalBossRefreshView()
@@ -171,7 +166,6 @@ public class BranchingDialogController : MonoBehaviour
         // No more choices to make
         else
         {
-            Debug.Log("Start Menu?");
             SceneManager.LoadScene("StartMenu");
         }
         // Scrolls to the bottom
@@ -247,7 +241,6 @@ public class BranchingDialogController : MonoBehaviour
     }
     IEnumerator MakeNewDialog(string newDialog)
     {
-        Debug.Log("The next line = " + newDialog);
         // Instantiates the dialog object (the prefab) on the dialog holder
         scrollInProgress = true;
         DialogObject newDialogObject = Instantiate(dialogPrefab, dialogHolder.transform).GetComponent<DialogObject>();

@@ -198,12 +198,10 @@ public static class GameState
                 {
                     questList[i].Complete = true;
                     questList[i].Active = false;
-                    Debug.Log(quest.npcName + " quest complete.");
                 }
                 else
                 {
                     questList[i].Active = true;
-                    Debug.Log(quest.npcName + " quest active.");
                 }
                 
                 break;

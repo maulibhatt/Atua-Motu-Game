@@ -19,7 +19,6 @@ public class LedgeCollision : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("collided");
         if (collision.gameObject.name == "Player")
         {
             collision.gameObject.GetComponent<PlayerBoulderManager>().setSafety(true);
