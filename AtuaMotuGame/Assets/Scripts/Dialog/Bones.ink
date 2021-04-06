@@ -30,7 +30,7 @@ Bones: You will find the treasure east of me. " -> questions
 
 * [How to find it] You: How do I find the tablet?
     Bones: The riddle is supposed to help you find the right spot to dig.
-    Bones: Press H to dig.
+    Bones: Press [SPACE] to dig.
     Bones: Don't dig willy nilly, though. The desert heat is very strong.
     Bones: You should preserve your energy and dig only in places you're sure about.
     Bones: I usually get tired after I dig in 20 places, so I expect you will too. 

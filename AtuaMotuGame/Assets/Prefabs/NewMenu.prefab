@@ -4234,11 +4234,11 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "     Arrow keys/WASD  -  Move around\n     [LEFT SHIFT]   -   Run\n    
     [SPACE]  -  Attack with Silver Sword \n     [SPACE]  -  Interact with spirits
-    and island objects\n     p/ [ESC]  -  Open Pause Menu\n     H  -  Dig (only active
-    during digging quest)\n     [ENTER]  - Skip to next dialog\n\nLearn more about
-    the island by completing quests for the island spirits. You can challenge Ochano
-    as early as Day 4, but you must challenge him by Day 10.\n\nA new day begins
-    when you complete, fail, or abandon an active quest."
+    and island objects\n     [SPACE]  -  Dig (only active during digging quest)\n    
+    p/ [ESC]  -  Open Pause Menu\n     [ENTER]  - Skip to next dialog\n\nLearn more
+    about the island by completing quests for the island spirits. You can challenge
+    Ochano as early as Day 4, but you must challenge him by Day 10.\n\nA new day
+    begins when you complete, fail, or abandon an active quest."
 --- !u!1 &4565298645947856337
 GameObject:
   m_ObjectHideFlags: 0
