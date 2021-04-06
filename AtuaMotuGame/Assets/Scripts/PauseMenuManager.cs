@@ -59,6 +59,13 @@ public class PauseMenuManager : MonoBehaviour
         isInventoryActive = true;
     }
 
+    public void HideInventory()
+    {
+        pausePanel.SetActive(true);
+        inventoryPanel.SetActive(false);
+        isInventoryActive = false;
+    }
+
     public void ShowQuests()
     {
         pausePanel.SetActive(false);

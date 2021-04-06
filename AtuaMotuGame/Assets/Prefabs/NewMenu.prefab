@@ -544,8 +544,8 @@ RectTransform:
   m_Father: {fileID: 3473449426347288586}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.2, y: 0.2}
-  m_AnchorMax: {x: 0.8, y: 0.8}
+  m_AnchorMin: {x: 0.079, y: 0.125}
+  m_AnchorMax: {x: 0.92812455, y: 0.89350116}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1949,8 +1949,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 3473449426347288590}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: Resume
+        m_TargetAssemblyTypeName: PauseMenuManager, Assembly-CSharp
+        m_MethodName: HideInventory
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

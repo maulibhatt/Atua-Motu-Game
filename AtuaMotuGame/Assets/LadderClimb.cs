@@ -31,6 +31,11 @@ public class LadderClimb : Interactable
             // Check if the dialogbox is already active, then de-activate
             player.transform.position = a;
         }
+        if (GameState.LadderEnabled && entrance)
+        {
+            TileMapFloor.SetActive(false);
+            TileMapEntrance.SetActive(true);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
