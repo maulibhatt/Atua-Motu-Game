@@ -12,7 +12,7 @@ public class BreakableTile : MonoBehaviour
 
     public GameObject digText;
     public int currentDigs;
-    public int intialDigs = 15;
+    public int intialDigs = 20;
     // Start is called before the first frame update
     void Start()
     {
