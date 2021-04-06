@@ -31308,6 +31308,7 @@ MonoBehaviour:
   entrance: 0
   TileMapFloor: {fileID: 0}
   TileMapEntrance: {fileID: 0}
+  rockclimbing: 1
 --- !u!19719996 &330405018
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -31608,12 +31609,12 @@ PrefabInstance:
     - target: {fileID: 1667842431313973295, guid: 1154ec086215d4d2682ae57247908698,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.2
+      value: 4.9
       objectReference: {fileID: 0}
     - target: {fileID: 1667842431313973295, guid: 1154ec086215d4d2682ae57247908698,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.5
+      value: -9.1
       objectReference: {fileID: 0}
     - target: {fileID: 1667842431313973295, guid: 1154ec086215d4d2682ae57247908698,
         type: 3}

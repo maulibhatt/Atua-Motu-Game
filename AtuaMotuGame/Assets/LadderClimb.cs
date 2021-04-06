@@ -12,6 +12,7 @@ public class LadderClimb : Interactable
     public bool entrance;
     public GameObject TileMapFloor;
     public GameObject TileMapEntrance;
+    public bool rockclimbing;
 
     void Start()
     {
@@ -35,6 +36,10 @@ public class LadderClimb : Interactable
         {
             TileMapFloor.SetActive(false);
             TileMapEntrance.SetActive(true);
+        }
+        if (rockclimbing && Input.GetKeyDown(KeyCode.Space) && playerInRange)
+        {
+            player.transform.position = a;
         }
     }
 

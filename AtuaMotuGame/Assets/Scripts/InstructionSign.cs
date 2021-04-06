@@ -42,6 +42,7 @@ public class InstructionSign : Interactable
             clue.Raise();
             //clueOn.Raise();
             playerInRange = false;
+            dialogBoxPrefab.SetActive(false);
         }
     }
 
