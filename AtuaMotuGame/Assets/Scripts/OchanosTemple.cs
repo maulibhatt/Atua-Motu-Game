@@ -50,7 +50,6 @@ public class OchanosTemple : MonoBehaviour
 
     private void ChallengeOchano()
     {
-        Debug.Log("Temple Canvas activate!");
         BossDialogController.EnableBossCanvas();
         player.GetComponent<PlayerMovement>().EnablePlayerMovement();
         playerInRange = false;
