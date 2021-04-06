@@ -179,8 +179,7 @@ Ochano: "IF YOU DON'T, I WILL TAKE EVERY SPIRIT ON ATUA MOTU AS SACRIFICE INSTEA
     {free == "good" and strength == 5:
     Ochano kills you but resurrects the Guardian. 
     Ochano and the Guardian fight to the death, both destroying each other in the process.
-    Without Ochano, the trapped spirits are free...
-    But his evil followers still haunt Atua Motu and Ochano resumes his slumber.
+    Without Ochano, the trapped spirits are free but his evil followers still haunt Atua Motu.
     }
     {free == "both":
     Ochano kills you but frees all of the spirits. 
