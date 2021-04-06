@@ -37,7 +37,7 @@ Ochano: "TELL ME ITS NAME, OR IN DARKNESS YOU'LL DESCEND."
     
 * [Ice] You: "Is it ice?"
     ~ good = good + 1 
-    Ochano: "VERY INTERESTING..."
+    Ochano: "VERY GOOD..."
     -> q3
     
 * [Sword] You: "Is it my sword?"
