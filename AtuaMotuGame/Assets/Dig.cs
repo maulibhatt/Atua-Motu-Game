@@ -44,7 +44,6 @@ public class Dig : MonoBehaviour
                 textObj.gameObject.GetComponent<TMP_Text>().text = "No Item Found";
             } else if (item.gameObject.name == "Item")
             {
-                Debug.Log("Found");
                 textObj.gameObject.GetComponent<TMP_Text>().text = "Tablet Found";
                 Destroy(item.gameObject);
                 GameState.AddItem(item_to_add);

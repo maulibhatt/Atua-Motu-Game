@@ -26,7 +26,7 @@ public class BoulderManager : MonoBehaviour
     IEnumerator throwRocks()
     {
         float rand = Random.Range(0f, 100f);
-        if (rand < 7f)
+        if (rand < 5f)
         {
             float count = leftBound;
             int c = 0;
@@ -46,7 +46,7 @@ public class BoulderManager : MonoBehaviour
             GameObject boulder = Instantiate(boulderPrefab);
             boulder.transform.position = pos;
         }
-        yield return new WaitForSeconds(0.8f);
+        yield return new WaitForSeconds(1f);
         StartCoroutine("throwRocks");
     }
 }

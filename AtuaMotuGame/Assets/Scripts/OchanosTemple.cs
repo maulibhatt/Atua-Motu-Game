@@ -14,6 +14,8 @@ public class OchanosTemple : MonoBehaviour
     private bool boxActive = false;
     public GameObject oldSound;
     public GameObject newSound;
+
+    public GameObject askUI;
     
     void Start()
     {
@@ -29,18 +31,35 @@ public class OchanosTemple : MonoBehaviour
             // activate temple
             if (GameState.day > 3)
             {
-                Debug.Log("Temple Canvas activate!");
-                BossDialogController.EnableBossCanvas();
-                player.GetComponent<PlayerMovement>().EnablePlayerMovement();
-                playerInRange = false;
-                oldSound.SetActive(false);
-                newSound.SetActive(true);
-            } else
+                GameObject challenge = GameObject.Find("ChallengeOchano");
+                askUI = challenge.transform.GetChild(1).gameObject;
+                askUI.SetActive(true);
+                askUI.transform.GetChild(1).gameObject.GetComponent<Button>().onClick.AddListener(ChallengeOchano);
+                askUI.transform.GetChild(2).gameObject.GetComponent<Button>().onClick.AddListener(CloseWindow);
+
+
+
+            }
+            else
             {
                 StartCoroutine("ShowWarning");
             }
             
         }
+    }
+
+    private void ChallengeOchano()
+    {
+        BossDialogController.EnableBossCanvas();
+        player.GetComponent<PlayerMovement>().EnablePlayerMovement();
+        playerInRange = false;
+        oldSound.SetActive(false);
+        newSound.SetActive(true);
+    }
+
+    private void CloseWindow()
+    {
+        askUI.SetActive(false);
     }
 
     private void OnCollisionEnter2D(Collision2D other)

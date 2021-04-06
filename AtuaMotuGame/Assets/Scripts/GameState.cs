@@ -198,15 +198,25 @@ public static class GameState
                 {
                     questList[i].Complete = true;
                     questList[i].Active = false;
-                    Debug.Log(quest.npcName + " quest complete.");
                 }
                 else
                 {
                     questList[i].Active = true;
-                    Debug.Log(quest.npcName + " quest active.");
                 }
                 
                 break;
+            }
+        }
+    }
+
+    public static void ReInitializeQuest(Quest quest)
+    {
+        for (int i = 0; i < questList.Count; ++i)
+        {
+            if (questList[i].Quest == quest)
+            {
+                questList[i].Active = false;
+                questList[i].Complete = false;
             }
         }
     }

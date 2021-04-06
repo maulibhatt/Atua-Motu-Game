@@ -89,7 +89,6 @@ public class FinalBossDialog : MonoBehaviour
 
     void MakeNewDialog(string newDialog)
     {
-        Debug.Log("The next line = " + newDialog);
         // Instantiates the dialog object (the prefab) on the dialog holder
         BossDialogObject newDialogObject = Instantiate(dialogPrefab, dialogHolder.transform).GetComponent<BossDialogObject>();
         StartCoroutine(ScrollCo());
@@ -146,7 +145,6 @@ public class FinalBossDialog : MonoBehaviour
     {
         // waits one frame
         yield return null;
-        Debug.Log("Scrolling to the bottom");
         dialogScrollbar.verticalNormalizedPosition = 0f;
     }
 

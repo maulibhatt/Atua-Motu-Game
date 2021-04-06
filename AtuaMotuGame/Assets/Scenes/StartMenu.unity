@@ -250,7 +250,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -2.266388, y: 0}
+  m_AnchoredPosition: {x: -2.2663574, y: 0}
   m_SizeDelta: {x: 34.751, y: 33.2402}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &116727181
@@ -682,9 +682,9 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Instructions:\n     Arrow keys/WASD  -  Move around\n     [LEFT SHIFT]  
-    -   Run\n     [SPACE]  -  Interact with spirits and island objects\n     [SPACE] 
-    -  Attack or Dig \n     p/ [ESC]  -  Open Pause Menu\n     H  -  Dig (only active
-    during digging quest)\n     [ENTER]  - Skip to next dialog"
+    -   Run\n     [SPACE]  -  Attack or Interact with spirits and island objects\n    
+    H  -  Dig \n     p/ [ESC]  -  Open Pause Menu\n     H  -  Dig (only active during
+    digging quest)\n     [ENTER]  - Skip to next dialog"
 --- !u!222 &310215173
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1724,7 +1724,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 382971096}
   m_HandleRect: {fileID: 382971095}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -1917,7 +1917,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -5.2929688, y: 0}
+  m_SizeDelta: {x: -5.2929077, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1123653180
 MonoBehaviour:

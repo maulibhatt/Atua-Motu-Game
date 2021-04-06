@@ -37,7 +37,7 @@ Ochano: "TELL ME ITS NAME, OR IN DARKNESS YOU'LL DESCEND."
     
 * [Ice] You: "Is it ice?"
     ~ good = good + 1 
-    Ochano: "VERY INTERESTING..."
+    Ochano: "VERY GOOD..."
     -> q3
     
 * [Sword] You: "Is it my sword?"
@@ -167,16 +167,19 @@ Ochano: "IF YOU DON'T, I WILL TAKE EVERY SPIRIT ON ATUA MOTU AS SACRIFICE INSTEA
     The trapped human spirits are still under Ochano's rule.
     }
     {free == "good" and strength < 5:
-    Ochano kills you but frees the trapped human spirits. 
-    His fire energy has been weakened by the ice from the caves, so he loses the tight control he had on his evil followers. 
+    Ochano kills you but resurrects the guardian. 
+    Ochano's fire energy has been weakened by the ice from the caves, so he loses the battle when the Guardian challenges him again.
+    You are dead but Atua Motu's spirits are free at last.
     }
     {free == "good" and strength > 5:
-    Ochano kills you but frees the trapped human spirits. 
-    His fire energy has been strengthened by the volcano, and he punishes his evil followers for not better preventing human spirits' escape.
+    Ochano kills you but resurrects the old Guardian. 
+    Ochano's fire energy has been strengthened by the volcano, so he wins when he is challenged by the Guadian again.
+    Ochano punishes the island by engulfing it in flames for a century.
     }
     {free == "good" and strength == 5:
-    Ochano kills you but frees the trapped human spirits. 
-    His evil followers still haunt Atua Motu and Ochano resumes his slumber.
+    Ochano kills you but resurrects the Guardian. 
+    Ochano and the Guardian fight to the death, both destroying each other in the process.
+    Without Ochano, the trapped spirits are free but his evil followers still haunt Atua Motu.
     }
     {free == "both":
     Ochano kills you but frees all of the spirits. 
