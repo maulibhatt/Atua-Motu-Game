@@ -279,12 +279,12 @@ PrefabInstance:
     - target: {fileID: 1101398274465282728, guid: d0c4416cd758ffb4ca6c6b3df416ee01,
         type: 3}
       propertyPath: m_Size.y
-      value: 2.847917
+      value: 3.0236154
       objectReference: {fileID: 0}
     - target: {fileID: 1101398274465282728, guid: d0c4416cd758ffb4ca6c6b3df416ee01,
         type: 3}
       propertyPath: m_Offset.y
-      value: -0.92395854
+      value: -0.8361094
       objectReference: {fileID: 0}
     - target: {fileID: 1141346315422846082, guid: d0c4416cd758ffb4ca6c6b3df416ee01,
         type: 3}
@@ -1285,10 +1285,35 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4002519879690637936, guid: a5ae6f56da096436ab87a64d7a56fc3a,
+        type: 3}
+      propertyPath: m_ClearFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4002519879690637936, guid: a5ae6f56da096436ab87a64d7a56fc3a,
+        type: 3}
+      propertyPath: m_BackGroundColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4002519879690637936, guid: a5ae6f56da096436ab87a64d7a56fc3a,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.19215688
+      objectReference: {fileID: 0}
+    - target: {fileID: 4002519879690637936, guid: a5ae6f56da096436ab87a64d7a56fc3a,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.43921572
+      objectReference: {fileID: 0}
+    - target: {fileID: 4002519879690637936, guid: a5ae6f56da096436ab87a64d7a56fc3a,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.6313726
+      objectReference: {fileID: 0}
     - target: {fileID: 4002519879690637938, guid: a5ae6f56da096436ab87a64d7a56fc3a,
         type: 3}
       propertyPath: maxPosition.x
-      value: 9.75
+      value: 9.7
       objectReference: {fileID: 0}
     - target: {fileID: 4002519879690637938, guid: a5ae6f56da096436ab87a64d7a56fc3a,
         type: 3}
