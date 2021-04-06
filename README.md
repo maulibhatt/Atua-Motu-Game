@@ -39,5 +39,5 @@ Items: Walk over an item to collect it.
 -  Over 10 unique endings!
 
 ## Notes for TAs:
-Talk to NPCs to solve quests. You will gain valuable information that will help you in your encounter with the final boss.
+Talk to NPCs to recieve quests and instructions. Upon completion of quests will gain valuable information that will help you in your encounter with the final boss.
 - We hope you enjoy this game! We had a lot of fun making it, and it was a great learning experience. 
